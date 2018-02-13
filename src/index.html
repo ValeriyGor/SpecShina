@@ -10,34 +10,39 @@
 	<!-- Optional theme -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="css/bundle.min.css">
+    <script src="https://api-maps.yandex.ru/2.0-stable/?load=package.standard&lang=ru-RU" type="text/javascript"></script>
 </head>
 <body>
-	<header class="container header">
-		<div class="row">
-			<a href="index.html" class="header__logo col-lg-2"><img src="img/logo.png" alt=""></a>
-			<div class="header__city col-lg-2"><span>Екатеринбург</span></div>
-			<div class="col-lg-4 header__search">
-				<form action="#">
-					<input type="text" placeholder="Поиск по грузовым шинам">
-					<button><img src="img/search-icon.png" alt=""></button>
-				</form>
+	<header class="header">
+		<div class="container">
+			<div class="row">
+				<a href="index.html" class="header__logo col-lg-2"><img src="img/logo.png" alt=""></a>
+				<div class="header__city col-lg-2"><span>Екатеринбург</span></div>
+				<div class="col-lg-4 header__search">
+					<form action="#">
+						<input type="text" placeholder="Поиск по грузовым шинам">
+						<button><img src="img/search-icon.png" alt=""></button>
+					</form>
+				</div>
+				<div class="header__cart col-lg-2">
+					<a href=""><img src="img/cart-icon.png" alt="">Заказ: <span>14 500</span></a>
+					<span class="count-order">2</span>
+				</div>
+				<div class="header__mobile col-lg-2"><span>8 343 344-01-01</span></div>
 			</div>
-			<div class="header__cart col-lg-2">
-				<a href=""><img src="img/cart-icon.png" alt="">Заказ: <span>14 500</span></a>
-				<span class="count-order">2</span>
-			</div>
-			<div class="header__mobile col-lg-2"><span>8 343 344-01-01</span></div>
 		</div>
 	</header>
-	<nav class="container head-menu">
-		<ul>
-			<li class="active"><span>Главная страница</span></li>
-			<li><a href="">Каталог</a> </li>
-			<li><a href="">О компании</a></li>
-			<li><a href="">Доставка и оплата</a></li>
-			<li><a href="">Шиномонтаж </a></li>
-			<li><a href="">Контакты магазинов</a></li>
-		</ul>
+	<nav class="head-menu">
+		<div class="container">
+			<ul>
+				<li class="active"><span>Главная страница</span></li>
+				<li><a href="">Каталог</a> </li>
+				<li><a href="">О компании</a></li>
+				<li><a href="">Доставка и оплата</a></li>
+				<li><a href="">Шиномонтаж </a></li>
+				<li><a href="">Контакты магазинов</a></li>
+			</ul>
+		</div>		
 	</nav>
 	<section class="container-fluid banner">
 		<div class="banner__text">
@@ -48,11 +53,19 @@
 	</section>
 	<section class="catalog container">
 		<div class="row">
-			<div class="col-lg-4"><a href=""><span>Диски</span></a></div>
-			<div class="col-lg-8"><a href=""><span>Грузовые шины</span></a></div>
-			<div class="col-lg-4"><a href=""><span>Сельско- хозяйственные шины</span></a></div>
-			<div class="col-lg-4"><a href=""><span>Индустриальные (спецтехника) шины</span></a></div>
-			<div class="col-lg-4"><a href=""><span>Аккуммуляторы для грузовых машин</span></a></div>
+			<div class="col-lg-4 catalog__item"><a href=""><span>Диски</span></a></div>
+			<div class="col-lg-8 catalog__item item__width_in"><a href=""><span>Грузовые шины</span></a>
+				<div class="shin-hover">
+					<div class="shin-hover__container">
+						<h3>Грузовые шины</h3>
+						<p>Наша компания «Спецшина» представляет ассортимент в несколько сотен наименований грузовых шин и дисков высочайшего качества. И если Вам необходимо купить грузовые шины , то мы сможем помочь Вам с выбором.</p>
+						<a href="#" class="call-back">Обратный звонок</a>
+					</div>
+				</div>
+			</div>
+			<div class="col-lg-4 catalog__item"><a href=""><span>Сельско- хозяйственные шины</span></a></div>
+			<div class="col-lg-4 catalog__item"><a href=""><span>Индустриальные (спецтехника) шины</span></a></div>
+			<div class="col-lg-4 catalog__item"><a href=""><span>Аккуммуляторы для грузовых машин</span></a></div>
 		</div>		
 	</section>
 	<section class="about-company container">
@@ -67,7 +80,7 @@
 			<h2 class="col-lg-12">Схема проезда до магазинов</h2>
 			<div class="col-lg-7"><p>Чтобы проложить маршрут, выберите магазин и определите свое местоположение:</p></div>
 			<form action="#" class="col-lg-5 secrchme">
-				<select name="" id="">
+				<select name="" id="select__address">
 					<option value="">Выберите магазин</option>
 					<option value="1">Центральная база</option>
 					<option value="2">Розничный магазин 1</option>
@@ -77,6 +90,7 @@
 			</form>
 			<div class="col-lg-12 map">
 				<img src="img/map.png" alt="">
+				<div id="map" style="width: 100%; height: 400px"></div>
 			</div>
 		</div>
 	</section>
@@ -146,5 +160,35 @@
 	<!-- Latest compiled and minified JavaScript -->
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
     <script type="" src="js/script.js"></script>
+
+
+<script type="text/javascript">
+    ymaps.ready(init);
+    var myMap;
+
+
+    
+
+    function init(){     
+        myMap = new ymaps.Map ("map", {
+            center: [55.76, 37.64],
+            zoom: 7
+        });
+        	myMap.controls.add('mapTools');
+        	myMap.controls.add('zoomControl');
+        myMap.geoObjects.add(
+    	new ymaps.Placemark(
+	        [ymaps.geolocation.latitude, ymaps.geolocation.longitude],
+	        	{
+		            balloonContentHeader: ymaps.geolocation.country,
+		            balloonContent: ymaps.geolocation.city,
+		            balloonContentFooter: ymaps.geolocation.region
+		        }
+		    )
+		);
+	}
+
+</script>
+
 </body>
 </html>
