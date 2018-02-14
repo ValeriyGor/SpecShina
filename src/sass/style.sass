@@ -7,7 +7,7 @@ $bold: 700
 
 body
 	background: #f7f7f7 
-	//background: url(../img/all.png) center bottom no-repeat
+	//background: url(../img/all.png) center top no-repeat
 	background-size: 1920px
 
 h2
@@ -32,19 +32,81 @@ h2
 	&__logo
 		padding-top: 2px
 	&__city
-		text-align: right
-		span
-			font: $semibold 14px/42px 'Open Sans', sans-serif
-			&:before
+		position: relative
+		p
+			text-align: left
+			padding-left: 15px
+			width: 100%
+			line-height: 41px
+			border: 2px solid #d0d0d0
+			display: block
+			transition: all 0.3s
+			position: relative
+			&.open:after
+				position: absolute
+				border: 7.5px solid transparent
 				content: ""
-				height: 20px
-				width: 14px
-				display: inline-block
-				background: url("../img/location-ico.png") center no-repeat
-				background-size: contain
-				position: relative
-				top: 4px
-				right: 10px
+				display: block
+				height: 0
+				width: 0
+				top: 59px
+				left: 76px
+				z-index: 99
+				border-color:  rgba(255,212,52,0) rgba(255,212,52,0) #e6e6e6
+				border-top-width: 0
+				border-bottom-width: 8px
+			&.open:before
+				position: absolute
+				border: 5.5px solid transparent
+				content: ""
+				display: block
+				height: 0
+				width: 0
+				top: 61px
+				left: 78px
+				z-index: 101
+				border-color:  rgba(255,212,52,0) rgba(255,212,52,0) #fff
+				border-top-width: 0
+				border-bottom-width: 7px
+			.marker
+				font-size: 16px 
+				padding-right: 5px
+			span
+				font: $semibold 14px/39px 'Open Sans', sans-serif
+				transition: all 0.3s
+
+			&:hover
+				border-color: #ffdb4d
+				background: #ffdb4d
+				cursor: pointer
+	&__city-list
+		position: absolute
+		background: #fff
+		top: 69px
+		left: -4px
+		min-width: 208px
+		border-radius: 4px
+		border: 1px solid #e6e6e6
+		display: none
+		li
+			a
+				display: block
+				color: #000    
+				font: 14px/34px Open Sans;
+				border-bottom: 1px solid #e6e6e6;
+				padding-left: 23px
+				word-wrap: break-word
+				width: 100%
+
+				&:hover
+					background: #ffdb4d
+					text-decoration: none
+			&:last-child
+				a
+					border-bottom: none
+
+
+
 	&__search
 		position: relative
 		input

@@ -36,20 +36,79 @@ h2 {
   .header__logo {
     padding-top: 2px; }
   .header__city {
-    text-align: right; }
-    .header__city span {
-      font: 600 14px/42px "Open Sans", sans-serif; }
-      .header__city span:before {
+    position: relative; }
+    .header__city p {
+      text-align: left;
+      padding-left: 15px;
+      width: 100%;
+      line-height: 41px;
+      border: 2px solid #d0d0d0;
+      display: block;
+      -webkit-transition: all 0.3s;
+      -o-transition: all 0.3s;
+      transition: all 0.3s;
+      position: relative; }
+      .header__city p.open:after {
+        position: absolute;
+        border: 7.5px solid transparent;
         content: "";
-        height: 20px;
-        width: 14px;
-        display: inline-block;
-        background: url("../img/location-ico.png") center no-repeat;
-        -webkit-background-size: contain;
-        background-size: contain;
-        position: relative;
-        top: 4px;
-        right: 10px; }
+        display: block;
+        height: 0;
+        width: 0;
+        top: 59px;
+        left: 76px;
+        z-index: 99;
+        border-color: rgba(255, 212, 52, 0) rgba(255, 212, 52, 0) #e6e6e6;
+        border-top-width: 0;
+        border-bottom-width: 8px; }
+      .header__city p.open:before {
+        position: absolute;
+        border: 5.5px solid transparent;
+        content: "";
+        display: block;
+        height: 0;
+        width: 0;
+        top: 61px;
+        left: 78px;
+        z-index: 101;
+        border-color: rgba(255, 212, 52, 0) rgba(255, 212, 52, 0) #fff;
+        border-top-width: 0;
+        border-bottom-width: 7px; }
+      .header__city p .marker {
+        font-size: 16px;
+        padding-right: 5px; }
+      .header__city p span {
+        font: 600 14px/39px "Open Sans", sans-serif;
+        -webkit-transition: all 0.3s;
+        -o-transition: all 0.3s;
+        transition: all 0.3s; }
+      .header__city p:hover {
+        border-color: #ffdb4d;
+        background: #ffdb4d;
+        cursor: pointer; }
+  .header__city-list {
+    position: absolute;
+    background: #fff;
+    top: 69px;
+    left: -4px;
+    min-width: 208px;
+    -webkit-border-radius: 4px;
+    border-radius: 4px;
+    border: 1px solid #e6e6e6;
+    display: none; }
+    .header__city-list li a {
+      display: block;
+      color: #000;
+      font: 14px/34px Open Sans;
+      border-bottom: 1px solid #e6e6e6;
+      padding-left: 23px;
+      word-wrap: break-word;
+      width: 100%; }
+      .header__city-list li a:hover {
+        background: #ffdb4d;
+        text-decoration: none; }
+    .header__city-list li:last-child a {
+      border-bottom: none; }
   .header__search {
     position: relative; }
     .header__search input {
