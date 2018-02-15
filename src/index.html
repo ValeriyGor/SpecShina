@@ -14,10 +14,19 @@
 <body>
 	<header class="header">
 		<div class="container">
+			<div class="button-mobile">
+				<svg viewBox="0 0 800 600" class="">
+				  <path d="M300,220 C300,220 520,220 540,220 C740,220 640,540 520,420 C440,340 300,200 300,200" class="top_bar" />
+
+				  <path d="M300,320 L540,320" class="middle_bar" />
+
+				  <path d="M300,210 C300,210 520,210 540,210 C740,210 640,530 520,410 C440,330 300,190 300,190" class="bottom_bar" transform="translate(480, 320) scale(1, -1) translate(-480, -318)" />
+				</svg>
+			</div>
 			<div class="row">
-				<a href="index.html" class="header__logo col-lg-2"><img src="img/logo.png" alt=""></a>
-				<div class="header__city col-lg-2">
-					<p><span class="marker"><i class="fas fa-map-marker-alt"></i></span><span>Ханты-Мансийск</span></p>
+				<a href="index.html" class="header__logo col-sm-2"><img src="img/logo.png" alt=""></a>
+				<div class="header__city col-sm-2">
+					<p><span class="marker"><i class="fas fa-map-marker-alt"></i></span><span class="desc_none">Ваш город: </span><span>Ханты-Мансийск</span></p>
 					<ul class="header__city-list">
 						<li><a href="">Екатеринбург</a></li>
 						<li><a href="">Ханты-Мансийск</a></li>
@@ -30,32 +39,29 @@
 						<li><a href="">Караганда</a></li>
 					</ul>
 				</div>
-				<div class="col-lg-4 header__search">
+				<div class="col-sm-4 header__search">
 					<form action="#">
 						<input type="text" placeholder="Поиск по грузовым шинам">
-						<button><img src="img/search-icon.png" alt=""></button>
+						<button><i class="fas fa-search"></i></button>
 					</form>
 				</div>
-				<div class="header__cart col-lg-2">
+				<div class="header__cart col-sm-2">
 					<a href=""><img src="img/cart-icon.png" alt="">Заказ: <span>14 500</span></a>
 					<span class="count-order">2</span>
 				</div>
-				<div class="header__mobile col-lg-2"><span>8 343 344-01-01</span></div>
+				<div class="header__mobile col-sm-2"><span>8 343 344-01-01</span></div>
+				<ul class="head-menu col-sm-12">
+					<li class="active"><span>Главная страница</span></li>
+					<li><a href="">Каталог</a> </li>
+					<li><a href="">О компании</a></li>
+					<li><a href="">Доставка и оплата</a></li>
+					<li><a href="">Шиномонтаж </a></li>
+					<li><a href="">Контакты магазинов</a></li>
+				</ul>
 			</div>
-		</div>
+		</div>	
+		<div class="line"></div>
 	</header>
-	<nav class="head-menu">
-		<div class="container">
-			<ul>
-				<li class="active"><span>Главная страница</span></li>
-				<li><a href="">Каталог</a> </li>
-				<li><a href="">О компании</a></li>
-				<li><a href="">Доставка и оплата</a></li>
-				<li><a href="">Шиномонтаж </a></li>
-				<li><a href="">Контакты магазинов</a></li>
-			</ul>
-		</div>		
-	</nav>
 	<section class="container-fluid banner">
 		<div class="banner__text">
 			<h1>Фирменные грузовые шины в Екатеринбурге</h1>
@@ -75,7 +81,7 @@
 					</div>
 				</div>
 			</div>
-			<div class="col-lg-4 catalog__item"><a href=""><span>Сельско- хозяйственные шины</span></a></div>
+			<div class="col-lg-4 catalog__item"><a href=""><span>Сельско-хозяйственные шины</span></a></div>
 			<div class="col-lg-4 catalog__item"><a href=""><span>Индустриальные (спецтехника) шины</span></a></div>
 			<div class="col-lg-4 catalog__item"><a href=""><span>Аккуммуляторы для грузовых машин</span></a></div>
 		</div>		
@@ -84,7 +90,7 @@
 		<div class="about-company__text">
 			<h2>О компании Спецшина</h2>
 			<p>Если Вы ищете проверенное место, где можно купить шины для грузового автомобиля или спецтехники, то Вы попали по адресу. Компания «Спецшина» представляет шины для спецтехники и грузовых автомобилей, таких как грейдер, экскаватор, погрузчик или самосвал. Еще больший ассортимент Вы найдете в разделе грузовых шин, где сможете подобрать товар по типу их назначения: рулевые, ведущие и даже прицепные.</p>
-			<img src="img/img-about.png" alt="">
+			<div class="about-company__img"></div>
 		</div>
 	</section>
 	<section class="map-wrap container">
@@ -110,7 +116,7 @@
 			<div class="col-lg-4 address-item">
 				<div class="address__content">
 					<a href="#">Центральная база</a>
-					<p>Звоните: (343) 344-01-01, 344-02-02 </p>
+					<p>Звоните: <span>(343) 344-01-01, 344-02-02</span> </p>
 					<p>Адрес: г. Березовский ЦОФ-5</p>
 					<p>График работы: с 9:00 до 18:00</p>
 				</div>
@@ -118,7 +124,7 @@
 			<div class="col-lg-4 address-item">
 				<div class="address__content">
 					<a href="">Розничный магазин 1</a>
-					<p>Звоните: (343) 344-01-01, (343) 344-02-02</p>
+					<p>Звоните: <span>(343) 344-01-01, (343) 344-02-02</span></p>
 					<p>Адрес: Сибирский тракт 30й км.</p>
 					<p>График работы: КРУГЛОСУТОЧНО</p>
 				</div>
@@ -126,7 +132,7 @@
 			<div class="col-lg-4 address-item">
 				<div class="address__content">
 					<a href="">Розничный магазин 2</a>
-					<p>Звоните: (343) 344-01-01, (343) 344-02-02</p>
+					<p>Звоните: <span>(343) 344-01-01, (343) 344-02-02</span></p>
 					<p>Адрес: ЕКАД 30й км. (возле АЗС "Лукойл")</p>
 					<p>График работы: КРУГЛОСУТОЧНО</p>
 				</div>
@@ -134,7 +140,11 @@
 		</div>		
 	</section>
 	<footer class="footer">
-		<div class="container">
+		<div class="container desc_none">
+				<div class="col-xs-6 footer__logo-mob"><img src="img/logo-white.png" alt=""></div>
+				<div class="col-xs-6 footer__number-mob"><span><i class="fas fa-phone" data-fa-transform="rotate-90" ></i></span><span>8 343 344-01-01</span></div>
+		</div>
+		<div class="container mob_none">
 			<div class="row">
 				<div class="col-lg-3">
 					<img src="img/logo-footer.png" alt="" class="footer-logo"> 

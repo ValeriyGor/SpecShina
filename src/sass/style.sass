@@ -7,8 +7,8 @@ $bold: 700
 
 body
 	background: #f7f7f7 
-	//background: url(../img/all.png) center top no-repeat
-	background-size: 1920px
+	//background: url(../img/alml.png) center top 59px no-repeat
+	background-size: 640px
 
 h2
 	color: #000
@@ -16,21 +16,20 @@ h2
 	line-height: 55px
 	font-weight: $semibold
 
-.container
-	width: 1200px
 .head-menu
-	ul
-		display: flex
-		align-items: center
-		justify-content: space-between
-		li
-			display: inline-block
+	display: flex
+	align-items: center
+	justify-content: space-between
+	li
+		display: inline-block
 .header
 	padding-top: 22px
-	padding-bottom: 21px
 	background: #fcfcfc
+	position: relative
 	&__logo
 		padding-top: 2px
+		img
+			width: 168px
 	&__city
 		position: relative
 		p
@@ -105,7 +104,11 @@ h2
 				a
 					border-bottom: none
 
-
+	.line
+		width: 100%
+		border-top: 1px solid #e6e6e6
+		position: absolute
+		bottom: 50px
 
 	&__search
 		position: relative
@@ -117,11 +120,12 @@ h2
 			width: 100%
 		button
 			position: absolute
-			top: 3px
+			top: 2px
 			right: 15px
 			background: transparent
 			height: 41px
 			width: 50px
+			font-size: 16px
 	&__cart
 		position: relative
 		a 
@@ -168,24 +172,21 @@ h2
 				right: 5px
 .head-menu
 	border-top: 1px solid #e6e6e6
-	border-bottom: 1px solid #e6e6e6
-	background: #fcfcfc
-	ul
-		padding-top: 6px
-		padding-bottom: 5px
-		li
-			a
-				color: #000
-				font: $normal 14px/40px 'Open Sans'
-				display: inline-block
-				transition: all 0.3s
-				&:hover
-					color: #808080
-					text-decoration: none
-
-			&.active
-				span
-					color: #808080
+	padding-top: 5px
+	padding-bottom: 5px
+	margin-top: 21px
+	li
+		a
+			color: #000
+			font: $normal 14px/40px 'Open Sans'
+			display: inline-block
+			transition: all 0.3s
+			&:hover
+				color: #808080
+				text-decoration: none
+		&.active
+			span
+				color: #808080
 .banner
 	height: 560px
 	display: flex
@@ -310,6 +311,11 @@ h2
 			text-align: justify
 		h2
 			text-align: center
+	&__img
+		background: url("../img/img-about.png") center no-repeat
+		background-size: cover
+		width: 100%
+		height: 360px
 
 .map
 	margin: 23px 0 30px
@@ -404,3 +410,499 @@ h2
 				span
 					color: #999
 
+.button-mobile	
+	position: absolute
+	width: 150px
+	left: -25px
+	top: 6px
+	z-index: 199
+	display: none
+
+.button-mobile svg
+	position: static
+	cursor: pointer
+	width: 100%
+	path
+		stroke-width: 15
+		stroke-linecap: round
+		stroke: #000
+		fill: none
+		-webkit-transition: all .5s ease-in-out
+		transition: all .5s ease-in-out
+
+
+.top_bar, .bottom_bar
+	stroke-dasharray: 240px 910px
+
+.middle_bar
+	stroke-dasharray: 240px 240px
+
+
+.open
+	.top_bar, .bottom_bar
+		stroke-dashoffset: -650px
+	.middle_bar
+		stroke-dasharray: 0px 220px
+		stroke-dashoffset: -120px
+
+@media (min-width: 1200px)
+	.container
+		width: 1200px
+
+@media (min-width: 992px) and (max-width: 1199px)
+	.container
+		width: 970px
+
+@media (min-width: 768px) and (max-width: 991px)
+	.container
+		width: 750px
+
+@media (min-width: 768px)
+	.desc_none
+		display: none
+
+@media (max-width: 767px)
+	h2
+		font-size: 44px
+		line-height: 62px
+	img
+		max-width: 100%
+	.container
+		width: 100%
+	.head-menu
+		display: none
+		flex-direction: column
+	.header
+		position: absolute
+		z-index: 299
+		width: 100%
+		top: 0
+		min-height: 130px
+		padding-top: 0
+		overflow: hidden
+		.button-mobile
+			&:after
+				content: "Закрыть"
+				font-size: 22px
+				color: #919191
+				position: absolute
+				top: 44px
+				left: 125px
+				opacity: 0
+				transition: all 0.3s
+		&.opened
+			padding-bottom: 25px
+			.button-mobile
+				&:after
+					opacity: 1
+
+			.header__logo
+				img
+					display: none
+			.header__cart 
+				width: 240px
+				a 
+					font-size: 24px
+					img
+						margin-right: 12px
+					span
+						font-size: 24px
+						padding-left: 8px
+		.container
+			.row
+				display: flex
+				flex-direction: column
+		&__mobile
+			display: none
+		&__cart
+			position: absolute
+			top: 35px
+			padding: 0
+			right: 45px
+			width: 60px
+			height: 60px
+			background: #ffdb4d
+			a
+				font-size: 0
+				line-height: 60px
+				width: 100%
+				height: 100%
+				display: flex
+				align-items: center
+				justify-content: center
+				word-wrap: break-word
+				img
+					margin-right: 0
+					top: 0
+				span
+					font-size: 0
+			.count-order
+				width: 26px
+				height: 26px
+				top: -12px
+				right: -12px
+				font-size: 16px
+				line-height: 26px
+
+		&__city
+			order: 5
+			display: none
+			padding: 0
+			background: #fafafa
+			p
+				border-left-color: #fafafa
+				border-right-color: #fafafa
+				font-size: 24px
+				line-height: 78px
+				.marker
+					font-size: 24px
+					padding-right: 30px
+					padding-left: 30px
+				span
+					font-size: 24px
+					font-weight: bold
+					color: #000
+					line-height: 78px
+					&.desc_none
+						font-weight: $normal
+				&.open:before, &.open:after
+					display: none
+
+		&__city-list
+			position: static
+			li
+				a
+					font-size: 24px
+					line-height: 75px
+					padding-left: 94px
+
+		&__search
+			padding-left: 30px
+			padding-top: 29px
+			padding-right: 30px
+			display: none
+			button
+				position: absolute
+				background: transparent
+				height: 80px
+				width: 73px
+				font-size: 30px
+				top: 29px
+				right: 30px
+			input
+				height: 81px
+				font-size: 24px
+				padding-left: 28px
+		&__logo
+			text-align: center
+			height: 130px
+			display: flex
+			justify-content: center
+			align-items: center
+			background: #fdfdfd
+			border-bottom: 2px solid #fdfdfd
+			padding-left: 30px
+			padding-right: 30px
+			transition: all 0.3s
+			&.open
+				background: #f7f7f7
+				transition: all 0.3s
+				border-bottom: 2px solid #eaeaea
+			img
+				width: auto
+		.line
+			display: none
+	.head-menu
+		border-top: none
+		padding-left: 96px
+		margin-top: 12px
+		li
+			display: block
+			width: 100%
+			a, span
+				font-size: 36px
+				line-height: 86px
+				text-align: left
+	.button-mobile
+		display: block
+	.banner
+		margin-top: 130px
+		height: 710px
+		margin-bottom: 35px
+		&__text 
+			h1
+				font-size: 44px
+			p
+				font-size: 24px
+				line-height: 36px
+				max-width: 90%
+				margin: 25px auto
+		.call-back
+			margin-top: 50px
+	
+	.catalog
+		&__item
+			padding-left: 30px
+			padding-right: 30px
+			>a
+				font-size: 36px
+				line-height: 44px
+				padding: 38px 40px
+		.row
+			&>div
+				height: 310px
+	.about-company
+		padding-left: 0
+		padding-right: 0
+		&__text
+			padding: 30px
+			margin-bottom: 50px
+			border-right-color: transparent
+			border-left-color: transparent
+			p
+				font-size: 22px
+				line-height: 36px
+				text-align: left
+				padding-top: 4px
+				margin-bottom: 45px
+		&__img
+			height: 290px
+			margin-bottom: 5px
+	.map-wrap 
+		padding-left: 30px
+		padding-right: 30px
+		h2
+			font-size: 36px
+			text-align: center
+			margin-bottom: 0
+		p
+			text-align: center
+			font-size: 22px
+			line-height: 30px
+			margin-bottom: 38px
+		.secrchme 
+			#select__address
+				width: 100%
+				background: #fff url("../img/arrow-down_mob.png") center right 30px no-repeat
+				height: 80px
+				font-size: 24px
+				padding-left: 26px
+				margin-bottom: 20px
+			button
+				float: none
+				display: block
+				width: 100%
+				height: 80px
+				font-size: 24px
+	.address 
+		&__content 
+			padding: 31px 20px 31px 60px
+			a
+				font-size: 30px
+				display: inline-block
+				margin-bottom: 6px
+			p
+				font-size: 22px
+				line-height: 36px
+				span
+					color: #3b6bc2
+	.footer
+		padding: 30px 0
+		margin-top: 60px
+		&__number-mob
+			text-align: right
+			span
+				font-size: 22px
+				line-height: 50px
+				&:first-child
+					margin-right: 10px
+
+	.address-item
+		padding-left: 0
+		padding-right: 0
+
+	.call-back
+		font-size: 24px
+		line-height: 70px
+		width: 320px 
+		height: 70px 
+	.mob_none
+		display: none
+
+
+@media (max-width: 420px)
+	h2
+		font-size: 22px
+		line-height: 31px
+	.header
+		min-height: 65px
+		.button-mobile
+			&:after
+				font-size: 11px
+				top: 22px
+				left: 62px
+		&.opened
+			padding-bottom: 12.5px
+			.header__cart 
+				width: 120px
+				a 
+					font-size: 12px
+					img
+						margin-right: 6px
+					span
+						font-size: 12px
+						padding-left: 4px
+		&__cart
+			top: 17.5px
+			right: 17.5px
+			width: 30px
+			height: 30px
+			a
+				font-size: 0
+				line-height: 30px
+			.count-order
+				width: 13px
+				height: 13px
+				top: -6px
+				right: -6px
+				font-size: 8px
+				line-height: 13px
+
+		&__city
+			p
+				font-size: 12px
+				line-height: 39px
+				.marker
+					font-size: 12px
+					padding-right: 15px
+					padding-left: 15px
+				span
+					font-size: 12px
+					line-height: 39px
+					&.desc_none
+						font-weight: $normal
+				&.open:before, &.open:after
+					display: none
+
+		&__city-list
+			position: static
+			li
+				a
+					font-size: 12px
+					line-height: 37.5px
+					padding-left: 47px
+
+		&__search
+			padding-left: 15px
+			padding-top: 15px
+			padding-right: 15px
+			button
+				height: 40px
+				width: 37px
+				font-size: 15px
+				top: 15px
+				right: 15px
+			input
+				height: 40px
+				font-size: 12px
+				padding-left: 14px
+		&__logo
+			height: 65px
+			padding-left: 15px
+			padding-right: 15px
+			img
+				width: 160px
+	.button-mobile
+		width: 75px
+		left: -12px
+		top: 3px
+	.head-menu
+		padding-left: 48px
+		margin-top: 6px
+		li
+			a, span
+				font-size: 18px
+				line-height: 43px
+	.banner
+		margin-top: 65px
+		height: 355px
+		margin-bottom: 17px
+		&__text 
+			h1
+				font-size: 22px
+				line-height: 28px
+			p
+				font-size: 12px
+				line-height: 18px
+				max-width: 90%
+				margin: 12px auto
+		.call-back
+			margin-top: 25px
+	
+	.catalog
+		&__item
+			padding-left: 15px
+			padding-right: 15px
+			>a
+				font-size: 18px
+				line-height: 22px
+				padding: 19px 20px
+		.row
+			&>div
+				height: 155px
+	.about-company
+		&__text
+			padding: 15px
+			margin-bottom: 25px
+			p
+				font-size: 12px
+				line-height: 18px
+				padding-top: 2px
+				margin-bottom: 23px
+		&__img
+			height: 145px
+			margin-bottom: 3px
+	.map-wrap 
+		padding-left: 15px
+		padding-right: 15px
+		h2
+			font-size: 18px
+			margin-bottom: 0
+		p
+			text-align: center
+			font-size: 12px
+			line-height: 15px
+			margin-bottom: 19px
+		.secrchme 
+			#select__address
+				background: #fff url("../img/arrow-down_mob.png") center right 15px no-repeat
+				height: 40px
+				font-size: 12px
+				padding-left: 13px
+				margin-bottom: 10px
+			button
+				height: 40px
+				font-size: 12px
+	.address 
+		&__content 
+			padding: 15px 10px 15px 30px
+			a
+				font-size: 15px
+				margin-bottom: 3px
+			p
+				font-size: 12px
+				line-height: 18px
+	.footer
+		padding: 15px 0
+		margin-top: 30px
+		&__number-mob
+			span
+				font-size: 12px
+				line-height: 25px
+				&:first-child
+					margin-right: 5px
+	.call-back
+		font-size: 14px
+		line-height: 35px
+		width: 160px 
+		height: 35px 
