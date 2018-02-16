@@ -7,8 +7,8 @@ $bold: 700
 
 body
 	background: #f7f7f7 
-	//background: url(../img/all_tablet.png) center top no-repeat
-	background-size: 1024px
+	//background: url(../img/all.png) center top -5px no-repeat
+	background-size: 1920px
 
 h2
 	color: #000
@@ -98,7 +98,7 @@ h2
 				word-wrap: break-word
 				width: 100%
 
-				&:hover
+				&:hover, &.active
 					background: #ffdb4d
 					text-decoration: none
 			&:last-child
@@ -116,7 +116,7 @@ h2
 		input
 			border: 2px solid #ffdb4d
 			height: 45px
-			padding-left: 21px
+			padding-left: 15px
 			padding-right: 40px
 			width: 100%
 		button
@@ -362,9 +362,14 @@ h2
 		p
 			font-size: 14px
 			line-height: 26px
+			span
+				color: #000
+				font-size: 14px
+				text-decoration: none
 
 .secrchme
 	#selectbox1
+		cursor: pointer
 		width: 265px
 		height: 45px
 		vertical-align: top
@@ -448,6 +453,7 @@ h2
 					line-height: 20px
 					padding-right: 35px
 					margin: 12px 0 20px
+					color: #fff
 			h3
 				font: $semibold 18px/30px 'Open Sans'
 				color: #fff
@@ -501,6 +507,374 @@ h2
 	.middle_bar
 		stroke-dasharray: 0px 220px
 		stroke-dashoffset: -120px
+
+.breadscrumb
+	margin-top: 15px
+	margin-bottom: 15px
+	a
+		font-size: 13px
+		line-height: 36px
+		display: inline-block
+		text-decoration: none
+		color: #000
+		&:after
+			content: ""
+			display: inline-block
+			border: 3.5px solid transparent
+			height: 0
+			width: 0
+			border-color:  rgba(255,212,52,0) rgba(255,212,52,0) rgba(255,212,52,0) #c6c6c6
+			margin: 0 13px 0 14px
+			border-right-width: 0
+			border-left-width: 4px
+	span
+		color: #999
+		font-size: 13px
+		line-height: 36px
+
+.category 
+	h3
+		font-size: 24px
+		font-weight: $semibold
+		line-height: 30px
+		padding-bottom: 15px
+		border-bottom: 2px solid #e6e6e6
+	.accordeon
+		padding-top: 16px
+		margin-bottom: 58px
+	&__head
+		font-size: 18px
+		line-height: 40px
+		color: #000
+		font-weight: $semibold
+		padding-left: 5px
+		cursor: pointer
+		transition: all 0.2s
+		&:hover
+			color: #0054b9
+	&__list 
+		padding-bottom: 10px
+		display: none
+		&.open
+			display: block
+		li
+			a
+				text-decoration: none
+				font-size: 14px
+				display: inline-block
+				line-height: 35px
+				color: #000
+				transition: all 0.3s
+				font-weight: $semibold
+				&:before
+					content: ""
+					height: 1px
+					width: 10px
+					background: #676767
+					display: inline-block
+					margin: 0 8px
+					position: relative
+					bottom: 3px
+					transition: all 0.3s
+				&:hover
+					color: #0054b9
+					&:before
+						width: 20px
+						background: #0054b9
+
+
+			&.active
+				a
+					color: #0054b9
+					&:before
+						width: 20px
+						background: #0054b9
+						margin-right: 11px
+.product
+	h3
+		font-size: 24px
+		line-height: 30px
+		padding-bottom: 15px
+		border-bottom: 2px solid #e6e6e6
+		margin-bottom: 30px
+		.bold
+			font-weight: $bold
+		span
+			color: #999
+			font-weight: $light
+	&__description
+		margin-top: 30px
+		margin-bottom: 30px
+		padding: 35px 40px
+		background: #fff
+		border-radius: 3px
+		border: 1px solid #e5e5e5
+		h4
+			font-size: 24px
+			line-height: 30px
+			font-weight: $semibold
+			margin-bottom: 7px
+		p
+			font-size: 14px
+			line-height: 28px
+			a
+				color: #0044cc
+				text-decoration: none
+				&:hover
+					text-decoration: underline
+	.other-order		
+		padding: 30px 40px
+		background: #fff
+		border-radius: 3px
+		border: 1px solid #e5e5e5
+		margin-bottom: 50px
+		h4
+			font-size: 24px
+			line-height: 32px
+			font-weight: $bold
+			text-align: center
+			margin-bottom: 6px
+		p
+			font-size: 18px
+			line-height: 26px
+			text-align: center
+
+	&__img
+		border: 1px solid #e5e5e5
+		border-radius: 3px
+		height: 320px
+		background: #fff
+		display: flex
+		img
+			margin: auto
+			max-width: 90%
+			max-height: 90%
+
+.offer
+	padding-left: 35px
+	p
+		font-size: 16px
+		line-height: 30px
+	.questions
+		font-size: 18px
+		line-height: 22px
+		font-weight: 700
+	.product__price
+		font-size: 31px
+		line-height: 60px
+		span
+			font-weight: $bold
+	form
+		padding: 13px 2px 22px
+		border-bottom: 2px solid #e8e8e8
+		margin-bottom: 28px
+		input
+			height: 50px
+			width: 45px
+			border: 1px solid #e5e5e5
+			background: #fff
+			border-radius: 3px
+			color: #999
+			text-align: center
+		.buy
+			width: 180px
+			height: 50px
+			background: #ffdb4d
+			margin: 0 10px
+			font-size: 18px
+			font-weight: $bold
+		.product-status
+			font-size: 16px
+			padding-left: 10px
+			line-height: 25px
+			display: inline-block
+			position: relative
+			top: -5px
+			.chevron
+				font-size: 25px
+				line-height: 25px 
+				vertical-align: middle
+				margin-right: 8px
+				color: #8ac176
+	.call-back-form
+		color: #0054b9	
+		text-align: center
+		width: 206px
+		height: 50px
+		line-height: 50px 
+		margin: 10px 0 0 2px
+		border-radius: 3px
+		font-weight: $semibold
+		background: #fff
+		display: block
+		border: 1px solid #e5e5e5
+.logo-bidus
+	width: 150px
+.product-list
+	&__item
+		background: #fff
+		text-decoration: none
+		border: 1px solid #e5e5e5
+		border-bottom-width: 0
+		border-top-left-radius: 3px
+		border-top-right-radius: 3px
+		&.disabled-item
+			opacity: 0.5
+	&__img
+		height: 270px
+		width: 100%
+		border-bottom: 1px solid #e5e5e5
+		display: flex
+		background: #fff
+		margin-bottom: 18px
+		img
+			margin: auto
+			max-width: 95%
+			max-height: 95%
+	&__size
+		padding-left: 20px
+		font-size: 16px
+		line-height: 22px
+		font-weight: $semibold
+		span
+			color: #808080
+	&__tm
+		font-size: 14px
+		color: #999
+		padding-left: 20px
+		line-height: 24px
+	&__price
+		font-size: 18px
+		font-weight: $bold
+		padding-left: 20px
+		line-height: 49px
+	&__order-now
+		background: #ffdb4d
+		font-size: 18px
+		font-weight: $semibold
+		width: 100%
+		height: 52px
+		transition: all 0.3s
+		border-bottom-left-radius: 3px
+		border-bottom-right-radius: 3px
+		margin-bottom: 30px
+		&:hover:after
+			content: ""
+			display: inline-block
+			height: 18px
+			width: 18px
+			vertical-align: middle
+			background: url("../img/svg/ic_cart.svg") center no-repeat
+			background-size: contain
+			margin-left: 5px
+		&[disabled]
+			background: #e4e4e4
+			&:hover:after
+				display: none
+			&:hover
+				background: #e4e4e4
+		&:hover
+			cursor: pointer
+			background: #fcdf6b
+
+.catalog__head
+	display: flex
+	justify-content: space-between
+	align-items: flex-start
+	h3
+		flex: 8
+	div
+		flex: 2
+		margin-left: 15px
+.sort
+	border-bottom: 2px solid #ffdb4d
+	text-align: center
+	&-text
+		float: right
+		font-size: 14px
+		line-height: 14px
+		position: relative
+		top: 13px
+	select
+		cursor: pointer
+		background: transparent
+		border: none
+		outline: none
+		width: 100%	
+		height: 45px
+		padding-bottom: 6px
+		padding-left: 18px
+		font-weight: $semibold
+		background: transparent url("../img/svg/ic_smallarrow_down.svg") top 18px right 14px no-repeat
+		background-size: 10px
+		-webkit-appearance: none
+		-moz-appearance: none
+		appearance: none
+		::-webkit-scrollbar
+			background: transparent
+			width: 0.5em
+			position: absolute		
+		::-webkit-scrollbar-track 
+			background: transparent
+			position: absolute
+			z-index: -2		
+		::-webkit-scrollbar-thumb 
+			border-radius: 100px
+			background: #888
+		option
+			height: 35px
+
+
+.catalog__list
+	.product__description
+		margin: 0
+	a
+		transition: all 0.3s
+		color: #000
+		&:hover
+			text-decoration: none
+			color: #666
+
+.filters-text
+	font-size: 16px
+	font-weight: $semibold
+	color: #000
+	margin-top: 27px
+	margin-bottom: 18px
+	padding-left: 2px
+.add-filters
+	button
+		background: #0054b9
+		border-radius: 3px
+		width: 270px
+		height: 50px
+		font-size: 18px
+		color: #fff
+	select
+		cursor: pointer
+		display: block
+		border-radius: 3px
+		width: 100%
+		height: 50px
+		padding-left: 20px
+		margin-bottom: 15px
+		border: 1px solid #e5e5e5
+		background: #fff url("../img/svg/ic_arrow_down.svg") center right 15px no-repeat
+		background-size: 10px
+		-webkit-appearance: none
+		-moz-appearance: none
+		appearance: none
+		::-webkit-scrollbar
+			background: transparent
+			width: 0.5em
+			position: absolute		
+		::-webkit-scrollbar-track 
+			background: transparent
+			position: absolute
+			z-index: -2		
+		::-webkit-scrollbar-thumb 
+			border-radius: 100px
+			background: #888
 
 @media (min-width: 1200px)
 	.container
@@ -574,7 +948,15 @@ h2
 				line-height: 36px
 	.banner	
 		height: 480px
-	.catalog__item
+	.catalog
+		.shin-hover
+			padding: 0 10px
+		.row
+			&>div
+				margin-bottom: 20px
+		&__item
+			a
+				padding: 20px 15px
 		&>a
 			font-size: 28px
 
@@ -584,6 +966,9 @@ h2
 			p
 				font-size: 12px
 				line-height: 22px
+				span
+					font-size: 12px
+
 		.shin-hover 
 			&__container 
 				h3
@@ -610,6 +995,9 @@ h2
 			div:first-of-type 
 				p
 					font-size: 12px
+	.col-lg-1, .col-lg-10, .col-lg-11, .col-lg-12, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-md-1, .col-md-10, .col-md-11, .col-md-12, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-sm-1, .col-sm-10, .col-sm-11, .col-sm-12, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-xs-1, .col-xs-10, .col-xs-11, .col-xs-12, .col-xs-2, .col-xs-3, .col-xs-4, .col-xs-5, .col-xs-6, .col-xs-7, .col-xs-8, .col-xs-9
+		padding-left: 10px
+		padding-right: 10px
 		
 
 
@@ -624,7 +1012,7 @@ h2
 		width: 200px
 	.header
 		&__logo 
-			padding-top: 4px
+			padding-top: 2px
 			img
 				width: 110px
 				max-width: 100%
@@ -632,7 +1020,7 @@ h2
 			p 	
 				height: 30px
 				line-height: 24px
-				padding-left: 2px
+				padding-left: 3px
 				&.open:after
 					left: 40px
 					top: 43px
@@ -640,12 +1028,12 @@ h2
 					left: 42px
 					top: 45px
 				span
-					font-size: 9px
+					font-size: 10px
 					line-height: 24px
 				.marker
 					line-height: 24px
 					font-size: 10px
-					padding-right: 3px
+					padding-right: 4px
 		&__city-list 
 			left: -25px
 			top: 53px
@@ -656,7 +1044,7 @@ h2
 					line-height: 26px
 		&__mobile
 			span
-				font-size: 11px
+				font-size: 12px
 				line-height: 30px
 				&:before
 					height: 15px
@@ -664,20 +1052,20 @@ h2
 
 		&__cart 
 			a
-				font-size: 10px
+				font-size: 12px
 				line-height: 30px
 				height: 30px
 				span
-					font-size: 12px
+					font-size: 13px
 				img
 					margin-right: 4px
-					width: 12px
+					width: 14px
 					top: 2px
 		&__search 
 			input
 				height: 30px
 				font-size: 12px
-				padding-left: 15px
+				padding-left: 10px
 			button
 				height: 26px
 				width: 30px
@@ -687,7 +1075,7 @@ h2
 				height: 16px
 				width: 16px
 				top: -7px
-				right: 7px
+				right: 0px
 				font-size: 10px
 
 		.line
@@ -735,7 +1123,9 @@ h2
 		.row
 			&>div
 				height: 175px
+				margin-bottom: 15px
 		.shin-hover 
+			padding: 0 7.5px
 			.shin-hover__container 
 				padding: 15px 25px 15px 20px
 				h3
@@ -756,6 +1146,9 @@ h2
 			p
 				font-size: 10px
 				line-height: 18px
+				span
+					font-size: 10px
+
 		.shin-hover 
 			&__container 
 				h3
@@ -793,7 +1186,9 @@ h2
 					font-size: 12px
 		&-logo
 			width: 130px
-
+	.col-lg-1, .col-lg-10, .col-lg-11, .col-lg-12, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-md-1, .col-md-10, .col-md-11, .col-md-12, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-sm-1, .col-sm-10, .col-sm-11, .col-sm-12, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-xs-1, .col-xs-10, .col-xs-11, .col-xs-12, .col-xs-2, .col-xs-3, .col-xs-4, .col-xs-5, .col-xs-6, .col-xs-7, .col-xs-8, .col-xs-9
+		padding-left: 7.5px
+		padding-right: 7.5px
 
 @media (min-width: 768px)
 	.desc_none
@@ -810,6 +1205,7 @@ h2
 	.head-menu
 		display: none
 		flex-direction: column
+		padding-bottom: 30px
 	.header
 		position: absolute
 		z-index: 299
@@ -830,6 +1226,7 @@ h2
 				transition: all 0.3s
 		&.opened
 			padding-bottom: 25px
+			min-height: 100vh
 			.button-mobile
 				&:after
 					opacity: 1
@@ -949,6 +1346,7 @@ h2
 				height: 81px
 				font-size: 24px
 				padding-left: 28px
+				border-radius: 0
 		&__logo
 			text-align: center
 			height: 130px
@@ -1063,7 +1461,8 @@ h2
 				font-size: 22px
 				line-height: 36px
 				span
-					color: #3b6bc2
+					font-size: 22px
+					color: #000
 	.footer
 		padding: 25px 0
 		margin-top: 60px
@@ -1202,16 +1601,16 @@ h2
 				line-height: 43px
 	.banner
 		margin-top: 65px
-		height: 355px
+		height: 425px
 		margin-bottom: 17px
 		&__text 
 			h1
-				font-size: 22px
-				line-height: 28px
+				font-size: 24px
+				line-height: 34px
 			p
-				font-size: 12px
-				line-height: 18px
-				max-width: 90%
+				font-size: 14px
+				line-height: 20px
+				max-width: 95%
 				margin: 12px auto
 		.call-back
 			margin-top: 25px
@@ -1226,7 +1625,7 @@ h2
 				padding: 19px 20px
 		.row
 			&>div
-				height: 155px
+				height: 200px
 				margin-bottom: 15px
 		.shin-hover
 			.shin-hover__container 
@@ -1243,12 +1642,12 @@ h2
 
 	.about-company
 		&__text
-			padding: 15px
+			padding: 25px 15px
 			margin-bottom: 25px
 			p
-				font-size: 12px
-				line-height: 18px
-				padding-top: 2px
+				font-size: 14px
+				line-height: 20px
+				padding-top: 0
 				margin-bottom: 23px
 		&__img
 			height: 145px

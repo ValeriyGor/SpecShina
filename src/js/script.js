@@ -27,6 +27,16 @@ $( ".header__city p" ).click(function() {
         $(".head-menu").slideToggle(300);
 		$(".header__search").slideToggle(300);;
     }
-	
 });
 
+$(document).ready(function() {
+  //прикрепляем клик по заголовкам acc-head
+	$('.category__head').on('click', f_acc);
+});
+
+function f_acc(){
+//скрываем все кроме того, что должны открыть
+	$('.category__list').not($(this).next()).slideUp(300);
+// открываем или скрываем блок под заголовком, по которому кликнули
+    $(this).next().slideToggle(300);
+}
