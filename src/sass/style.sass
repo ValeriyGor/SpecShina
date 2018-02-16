@@ -7,8 +7,8 @@ $bold: 700
 
 body
 	background: #f7f7f7 
-	//background: url(../img/all.png) center top -5px no-repeat
-	background-size: 1920px
+	//background: url(../img/alml.png) center top 73px no-repeat
+	background-size: 375px
 
 h2
 	color: #000
@@ -26,6 +26,8 @@ h2
 	padding-top: 22px
 	background: #fcfcfc
 	position: relative
+	border-bottom: 1px solid #e6e6e6
+	transition: all 0.3s
 	&__logo
 		padding-top: 2px
 		img
@@ -729,8 +731,8 @@ h2
 		margin-bottom: 18px
 		img
 			margin: auto
-			max-width: 95%
-			max-height: 95%
+			max-width: 80%
+			max-height: 80%
 	&__size
 		padding-left: 20px
 		font-size: 16px
@@ -884,6 +886,7 @@ h2
 	.container
 		width: 970px
 	.header
+		padding-top: 30px
 		&__logo 
 			padding-top: 4px
 			img
@@ -932,7 +935,7 @@ h2
 				height: 36px
 				width: 40px
 		.line
-			bottom: 46px
+			bottom: 48px
 	h2
 		font-size: 32px
 	.about-company__text
@@ -942,10 +945,11 @@ h2
 			line-height: 26px
 	.head-menu
 		justify-content: space-between
+		margin-top: 30px
 		li
 			a
 				font-size: 13px
-				line-height: 36px
+				line-height: 38px
 	.banner	
 		height: 480px
 	.catalog
@@ -998,7 +1002,92 @@ h2
 	.col-lg-1, .col-lg-10, .col-lg-11, .col-lg-12, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-md-1, .col-md-10, .col-md-11, .col-md-12, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-sm-1, .col-sm-10, .col-sm-11, .col-sm-12, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-xs-1, .col-xs-10, .col-xs-11, .col-xs-12, .col-xs-2, .col-xs-3, .col-xs-4, .col-xs-5, .col-xs-6, .col-xs-7, .col-xs-8, .col-xs-9
 		padding-left: 10px
 		padding-right: 10px
-		
+	
+	.breadscrumb
+		margin-top: 18px
+		padding-left: 25px
+	.category
+		padding-left: 20px
+		.accordeon
+			padding-top: 10px
+			margin-bottom: 40px
+		h3
+			font-size: 20px
+			line-height: 30px
+			padding-bottom: 8px
+		&__head
+			font-size: 16px
+			line-height: 32px
+		&__list 
+			padding-top: 4px
+			padding-bottom: 8px
+			li 
+				a
+					font-size: 12px
+					line-height: 28px
+	.filters-text
+		padding-left: 5px
+		font-size: 14px
+		margin-top: 20px
+		margin-bottom: 15px
+	.add-filters 
+		select
+			height: 40px
+			margin-bottom: 12px
+		button
+			height: 40px
+			width: 100%
+			font-size: 16px
+	.catalog
+		&__head 
+			h3
+				font-size: 20px
+				line-height: 30px
+				padding-bottom: 8px
+				flex: 7
+		&__list 
+			.product__description
+				padding: 20px 35px
+				h4
+					font-size: 20px
+					margin-bottom: 4px
+				p
+					font-size: 12px
+					line-height: 21px
+	.sort
+		&-text
+			top: 14px
+		select
+			height: 38px
+			font-size: 13px
+			padding-left: 13px
+			padding-top: 5px
+			padding-bottom: 0
+	.product
+		h3
+			margin-bottom: 20px
+		&-list
+			margin-bottom: 25px
+			&__img
+				height: 220px
+			&__size
+				font-size: 13px
+				line-height: 14px
+			&__tm
+				font-size: 12px
+				line-height: 18px
+			&__price
+				font-size: 16px
+				line-height: 40px
+			&__order-now
+				height: 42px
+				font-size: 16px
+				margin-bottom: 15px
+	.row
+		margin-right: -10px
+		margin-left: -10px
+
+
 
 
 @media (min-width: 768px) and (max-width: 991px)
@@ -1169,26 +1258,136 @@ h2
 				font-size: 12px
 	.footer 
 		margin-top: 30px
+		padding-top: 30px
+		padding-bottom: 25px
 		.row 
 			div 
 				h3
 					padding-top: 0
+					font-size: 13px
+					line-height: 19px
+					min-height: 0
+					margin-bottom: 0
 				a
-					font-size: 12px
-					line-height: 25px
+					font-size: 10px
+					line-height: 20px
 				p
-					font-size: 12px
-					span
-						display: block
-						line-height: 15px
+					font-size: 10px
+					line-height: 20px
 			div:first-of-type 
 				p
-					font-size: 12px
+					font-size: 10px
+					line-height: 13px
+					margin: 4px 0  10px
 		&-logo
-			width: 130px
+			width: 110px
+		.logo-bidus
+			width: 100px
+
 	.col-lg-1, .col-lg-10, .col-lg-11, .col-lg-12, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-md-1, .col-md-10, .col-md-11, .col-md-12, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-sm-1, .col-sm-10, .col-sm-11, .col-sm-12, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-xs-1, .col-xs-10, .col-xs-11, .col-xs-12, .col-xs-2, .col-xs-3, .col-xs-4, .col-xs-5, .col-xs-6, .col-xs-7, .col-xs-8, .col-xs-9
 		padding-left: 7.5px
 		padding-right: 7.5px
+	.breadscrumb
+		padding-left: 15px
+		margin-bottom: 10px
+		a, span
+			font-size: 10px
+			line-height: 30px
+			&:after
+				border: 2.5px solid transparent
+				border-left-width: 3px
+				border-color: rgba(255,212,52,0) rgba(255,212,52,0) rgba(255,212,52,0) #c6c6c6
+				margin: 0 5px 0 10px
+	.category 
+		h3
+			font-size: 16px
+			line-height: 22px
+			padding-bottom: 8px
+		&__head
+			font-size: 12px 
+			line-height: 26px
+		.accordeon
+		 	padding-top: 8px
+		 	margin-bottom: 30px
+		&__list 
+			li 
+				a
+					font-size: 10px
+					line-height: 20px
+		.filters-text
+			font-size: 10px
+			margin-top: 15px
+			margin-bottom: 12px
+		.add-filters 
+			select
+				height: 30px
+				margin-bottom: 10px
+				font-size: 10px
+				padding-left: 10px
+
+			button
+				height: 30px
+				width: 100%
+				font-size: 12px
+	.catalog__head 
+		h3
+			font-size: 16px
+			line-height: 22px
+			padding-bottom: 8px
+			margin-bottom: 15px
+			flex: 10
+		>div
+			flex: 3
+	.sort
+		select
+			font-size: 10px
+			padding-left: 7px
+			height: 30px
+			padding-bottom: 0
+			background: transparent url(../img/svg/ic_smallarrow_down.svg) top 15px right 12px no-repeat
+			background-size: 7px
+		&-text
+			font-size: 12px
+			line-height: 12px
+			top: 10px
+	.product-list
+		&__img
+			height: 170px
+			margin-bottom: 9px
+			img
+				max-width: 80% 
+				max-height: 80%
+		&__size
+			font-size: 10px
+			padding-left: 10px
+			line-height: 18px
+		&__tm
+			padding-left: 10px
+			font-size: 10px
+			line-height: 10px
+		&__price
+			padding-left: 10px
+			font-size: 12px
+			line-height: 32px
+		&__order-now
+			height: 34px
+			font-size: 14px
+			margin-bottom: 10px
+	.row
+		margin-right: -7.5px
+		margin-left: -7.5px
+	.product-list
+		margin-bottom: 20px
+	.product
+		&__description 
+			padding: 14px 25px 20px
+			p
+				font-size: 10px
+				line-height: 16px
+			h4
+				font-size: 15px
+				margin-bottom: 0
+
 
 @media (min-width: 768px)
 	.desc_none
@@ -1367,6 +1566,8 @@ h2
 				max-width: 60%
 		.line
 			display: none
+	.mob_tabs
+		display: none
 	.head-menu
 		border-top: none
 		padding-left: 96px
@@ -1406,6 +1607,46 @@ h2
 		.row
 			&>div
 				height: 310px
+		&__head
+			flex-direction: column
+			h3
+				border-bottom: none
+				span
+					display: none
+	.product
+		&-list
+			&__img
+				height: 340px
+				img
+					max-width: 85%
+					max-height: 85%
+			&__size
+				font-size: 22px
+				padding-left: 25px
+				line-height: 28px
+			&__tm
+				padding-left: 25px
+				font-size: 17px
+			&__price
+				padding-left: 25px
+				font-size: 24px
+				line-height: 58px
+			&__order-now
+				height: 58px
+				font-size: 21px
+		&__description
+			padding: 24px 10px
+			margin-top: 10px
+
+			h4
+				font-size: 21px
+				line-height: 23px
+				margin-bottom: 4px
+			p
+				font-size: 12px
+				line-height: 19px
+
+
 	.about-company
 		padding-left: 0
 		padding-right: 0
@@ -1483,6 +1724,7 @@ h2
 			span
 				font-size: 22px
 				line-height: 50px
+				color: #fff
 				&:first-child
 					margin-right: 10px
 
@@ -1497,6 +1739,46 @@ h2
 		height: 70px 
 	.mob_none
 		display: none
+	.breadscrumb
+		display: none
+	.page-content
+		padding-top: 65px
+		position: relative
+	.product
+		margin-top: 60px
+	.tabs-filters
+		z-index: 80
+		position: absolute
+		width: 50%
+		top: 0
+		left: 0
+		border: 1px solid #eaeaea
+		border-width: 1px 0.5px 1px 0
+		h3
+			text-align: center
+			border-bottom: none
+			padding: 0
+			font-size: 16px
+			font-weight: $semibold
+			line-height: 45px
+			
+
+	.category 
+		z-index: 80
+		position: absolute
+		width: 50%
+		top: 0
+		right: 0
+		border: 1px solid #eaeaea
+		border-width: 1px 0 1px 0.5px
+		h3
+			text-align: center
+			border-bottom: none
+			padding: 0
+			font-size: 16px
+			font-weight: $semibold
+			line-height: 45px
+
 
 
 @media (max-width: 480px)
