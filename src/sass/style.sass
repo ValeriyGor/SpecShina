@@ -7,8 +7,8 @@ $bold: 700
 
 body
 	background: #f7f7f7 
-	//background: url(../img/alml.png) center top 73px no-repeat
-	background-size: 375px
+	//background: url(../img/alml.png) center top no-repeat
+	background-size: 640px
 
 h2
 	color: #000
@@ -27,7 +27,6 @@ h2
 	background: #fcfcfc
 	position: relative
 	border-bottom: 1px solid #e6e6e6
-	transition: all 0.3s
 	&__logo
 		padding-top: 2px
 		img
@@ -681,6 +680,7 @@ h2
 		.buy
 			width: 180px
 			height: 50px
+			border-radius: 3px
 			background: #ffdb4d
 			margin: 0 10px
 			font-size: 18px
@@ -1083,9 +1083,33 @@ h2
 				height: 42px
 				font-size: 16px
 				margin-bottom: 15px
+		.other-order 
+			p
+				font-size: 15px
+				line-height: 24px
+		&__img
+			height: 296px
 	.row
 		margin-right: -10px
 		margin-left: -10px
+	.offer 
+		p
+			font-size: 14px
+			line-height: 26px
+			&__price
+				font-size: 28px
+				line-height: 50px
+		form 
+			padding-bottom: 15px
+			margin-bottom: 25px
+			.product-status
+				top: -3px
+			input
+				height: 45px
+				width: 40px
+			.buy
+				height: 45px
+				width: 170px
 
 
 
@@ -1094,7 +1118,7 @@ h2
 	.container
 		width: 750px
 	h2
-		font-size: 26px
+		font-size: 24px
 	.call-back
 		font-size: 14px
 		line-height: 40px
@@ -1329,6 +1353,50 @@ h2
 				height: 30px
 				width: 100%
 				font-size: 12px
+	.product 
+		h3
+			font-size: 16px
+			line-height: 22px
+			padding-bottom: 8px
+			margin-bottom: 15px
+		&__img
+			height: 196px
+	.offer 
+		padding-left: 19px
+		.call-back-form
+			width: 128px
+			height: 30px
+			font-size: 11px
+			line-height: 26px
+			margin: 8px 0 0 2px
+		.questions
+			font-size: 12px
+			line-height: 14px
+		p
+			font-size: 10px
+			line-height: 18px
+			padding-left: 0px
+		.product__price
+			font-size: 20px
+			line-height: 38px
+		form 
+			padding: 6px 5px 15px
+			margin-bottom: 10px
+			input
+				height: 30px 
+				width: 40px
+			.buy
+				width: 114px
+				height: 30px
+				font-size: 14px
+			.product-status 
+				font-size: 10px
+				padding-left: 2px
+				top: -3px
+				.chevron
+					font-size: 15px
+					margin-right: 4px
+
 	.catalog__head 
 		h3
 			font-size: 16px
@@ -1379,15 +1447,25 @@ h2
 	.product-list
 		margin-bottom: 20px
 	.product
-		&__description 
-			padding: 14px 25px 20px
+		&__description
+			margin-top: 15px
+			margin-bottom: 15px
+			padding: 8px 15px 15px
 			p
 				font-size: 10px
 				line-height: 16px
 			h4
 				font-size: 15px
 				margin-bottom: 0
-
+		.other-order
+			padding: 16px 10px
+			margin-bottom: 15px
+			h4
+				font-size: 15px
+				line-height: 22px
+			p 
+				font-size: 12px
+				line-height: 12px
 
 @media (min-width: 768px)
 	.desc_none
@@ -1405,6 +1483,7 @@ h2
 		display: none
 		flex-direction: column
 		padding-bottom: 30px
+
 	.header
 		position: absolute
 		z-index: 299
@@ -1611,6 +1690,8 @@ h2
 			flex-direction: column
 			h3
 				border-bottom: none
+				font-size: 48px
+				font-weight: $bold
 				span
 					display: none
 	.product
@@ -1742,25 +1823,137 @@ h2
 	.breadscrumb
 		display: none
 	.page-content
-		padding-top: 65px
+		padding-top: 130px
 		position: relative
+		.button-tab
+			transition: all 0.3s
+			.mob_tabs
+				padding: 0
+			h3
+				&:after
+					content: ""
+					width: 15px
+					height: 20px
+					background: url(../img/svg/ic_arrow_down.svg) center no-repeat
+					background-size: contain
+					display: inline-block
+					margin-left: 10px
+					transition: all 0.3s
+
+
+			&.open
+				width: 100%
+				z-index: 99
+				h3
+					background: #f7df68
+					&:after
+						transform: scale(1, -1)
+				.mob_tabs
+					padding: 0
+					min-height: 80vh
+
 	.product
-		margin-top: 60px
+		margin-top: 140px
+		h3
+			font-size: 50px
+			line-height: 55px
+			font-weight: $bold
+			color: #000
+			border: none
+			padding-bottom: 7px
+			span
+				display: none
+		&__img
+			height: 585px
+			border-bottom-right-radius: 0
+			border-bottom-left-radius: 0
+		.offer
+			padding: 0
+			border-top-width: 0
+			.general
+				background: #fff
+				padding: 18px 0px 0
+				border: 1px solid #e5e5e5
+			p 
+				font-size: 20px
+				padding-left: 40px
+				line-height: 40px
+			.call-back-form
+				width: 100%
+				height: 90px
+				font-size: 27px
+				line-height: 90px
+				margin: 14px 0 0 2px
+			.product
+				&__price
+					font-size: 43px
+					line-height: 50px
+					border-bottom: 1px solid #e5e5e5
+					padding-bottom: 30px
+			form
+				display: flex
+				flex-wrap: wrap
+				justify-content: space-around
+				align-items: center
+				padding-bottom: 0
+				margin-bottom: 0
+				.product-status
+					top: 0
+				button
+					margin: 15px 0 0 0
+					order: 3
+					width: 100%
+					font-size: 36px
+					color: #000
+					height: 100px
+				span
+					order: 2
+				input
+					order: 1
+			
+			.questions
+				font-size: 36px
+				line-height: 44px
+			p
+				font-size: 22px
+
+		.product__description 
+			margin-top: 30px
+			padding: 30px 15px
+			h4
+				font-size: 30px
+				line-height: 36px
+				margin-bottom: 10px
+			p
+				font-size: 20px
+				line-height: 36px
+
+		.leave_mobile
+			margin-top: 50px
+			text-align: center
+			p
+				padding-left: 0
+
+
+
+
+
 	.tabs-filters
 		z-index: 80
 		position: absolute
 		width: 50%
 		top: 0
-		left: 0
+		right: 0
+		background: #fff
 		border: 1px solid #eaeaea
 		border-width: 1px 0.5px 1px 0
 		h3
 			text-align: center
 			border-bottom: none
 			padding: 0
-			font-size: 16px
+			font-size: 30px
 			font-weight: $semibold
-			line-height: 45px
+			line-height: 86px
 			
 
 	.category 
@@ -1768,17 +1961,55 @@ h2
 		position: absolute
 		width: 50%
 		top: 0
-		right: 0
+		background: #fff
+		left: 0
 		border: 1px solid #eaeaea
 		border-width: 1px 0 1px 0.5px
+		&__head
+			background: #fff
+			padding-left: 48px
+			font-size: 26px
+			line-height: 75px
+			color: #000
+			position: relative
+			border-bottom: 1px solid #eaeaea
+			&:after
+				content: ""
+				width: 10px
+				height: 15px
+				background: url(../img/svg/ic_arrow_right.svg) center no-repeat
+				background-size: contain
+				display: inline-block
+				margin-left: 10px
+				transition: all 0.3s
+				position: absolute
+				top: 33px
+				right: 30px
+			&.open
+				color: #0054b9
+				&:after
+					transform: rotate(90deg)
+
+		&__list
+			li
+				background: #f7f7f7
+				border-bottom: 1px solid #eaeaea
+				padding-left: 58px
+				a
+					font-size: 24px
+					line-height: 67px
+					&:before
+						display: none
 		h3
 			text-align: center
 			border-bottom: none
 			padding: 0
-			font-size: 16px
+			font-size: 30px
 			font-weight: $semibold
-			line-height: 45px
-
+			line-height: 86px
+	.page-content	
+		.full-width
+			width: 100%
 
 
 @media (max-width: 480px)
@@ -1786,12 +2017,12 @@ h2
 		font-size: 22px
 		line-height: 31px
 	.header
-		min-height: 65px
+		min-height: 75px
 		.button-mobile
 			&:after
-				font-size: 11px
-				top: 22px
-				left: 62px
+				font-size: 12px
+				top: 28px
+				left: 75px
 		&.opened
 			padding-bottom: 12.5px
 			.header__cart 
@@ -1804,20 +2035,20 @@ h2
 						font-size: 12px
 						padding-left: 4px
 		&__cart
-			top: 17.5px
-			right: 17.5px
-			width: 30px
-			height: 30px
+			top: 20px
+			right: 25px
+			width: 35px
+			height: 35px
 			a
 				font-size: 0
 				line-height: 30px
 				img
-					width: 12px
+					width: 14px
 			.count-order
-				width: 13px
-				height: 13px
-				top: -6px
-				right: -6px
+				width: 15px
+				height: 15px
+				top: -7px
+				right: -7px
 				font-size: 8px
 				line-height: 13px
 
@@ -1862,18 +2093,20 @@ h2
 				right: 15px
 			input
 				height: 40px
-				font-size: 12px
+				font-size: 13px
 				padding-left: 14px
 		&__logo
-			height: 65px
+			height: 75px
 			padding-left: 15px
 			padding-right: 15px
 			img
 				width: 160px
 	.button-mobile
-		width: 75px
-		left: -12px
-		top: 3px
+		width: 92px
+		left: -16px
+		top: 1px
+		svg
+			transition: none
 	.head-menu
 		padding-left: 48px
 		margin-top: 6px
@@ -1882,7 +2115,7 @@ h2
 				font-size: 18px
 				line-height: 43px
 	.banner
-		margin-top: 65px
+		margin-top: 75px
 		height: 425px
 		margin-bottom: 17px
 		&__text 
@@ -1920,6 +2153,13 @@ h2
 					line-height: 16px
 				.call-back
 					margin-top: 5px
+		&__head
+			div
+				margin-left: 0
+			h3
+				font-size: 28px
+				line-height: 36px
+				margin-bottom: 0
 
 
 	.about-company
@@ -1971,6 +2211,13 @@ h2
 	.map
 		margin: 19px 0 13px
 		height: 300px
+	.sort
+		width: 100%
+		padding-left: 45%
+		margin-bottom: 15px
+		border-bottom: none
+		select
+			border-bottom: 2px solid #ffdb4d
 	.footer
 		padding: 12px 0 
 		margin-top: 30px
@@ -1988,3 +2235,89 @@ h2
 		line-height: 35px
 		width: 160px 
 		height: 35px 
+	.category 
+		z-index: 80
+		position: absolute
+		width: 50%
+		top: 0
+		background: #fff
+		left: 0
+		border: 1px solid #eaeaea
+		border-width: 1px 0 1px 0.5px
+		&__head
+			background: #fff
+			padding-left: 28px
+			font-size: 15px
+			line-height: 45px
+			&:after
+				top: 20px
+				right: 17px
+				width: 6px
+				height: 10px
+		&__list
+			li
+				background: #f7f7f7
+				border-top: 1px solid #eaeaea
+				padding-left: 40px
+				a
+					font-size: 14px
+					line-height: 38px
+					&:before
+						display: none
+		h3
+			text-align: center
+			border-bottom: none
+			padding: 0
+			font-size: 20px
+			font-weight: $semibold
+			line-height: 50px
+
+
+	.page-content
+		padding-top: 75px
+		position: relative
+		.button-tab
+			transition: all 0.3s
+			.mob_tabs
+				padding: 0
+			h3
+				&:after
+					content: ""
+					width: 10px
+					height: 10px
+					background: url(../img/svg/ic_arrow_down.svg) center no-repeat
+					background-size: contain
+					display: inline-block
+					margin-left: 10px
+					transition: all 0.3s
+
+
+			&.open
+				width: 100%
+				z-index: 99
+				h3
+					background: #f7df68
+					&:after
+						transform: scale(1, -1)
+				.mob_tabs
+					padding: 0
+					min-height: 80vh
+
+	.product
+		margin-top: 80px
+	.tabs-filters
+		z-index: 80
+		position: absolute
+		width: 50%
+		top: 0
+		right: 0
+		background: #fff
+		border: 1px solid #eaeaea
+		border-width: 1px 0.5px 1px 0
+		h3
+			text-align: center
+			border-bottom: none
+			padding: 0
+			font-size: 20px
+			font-weight: $semibold
+			line-height: 50px

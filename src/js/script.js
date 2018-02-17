@@ -29,6 +29,13 @@ $( ".header__city p" ).click(function() {
     }
 });
 
+$( ".button-tab h3" ).click(function() {
+	if ($(window).width() <= '767'){
+		$(this).next().slideToggle(300);
+		$(this).parent().toggleClass("open");
+	}
+});
+
 $(document).ready(function() {
   //прикрепляем клик по заголовкам acc-head
 	$('.category__head').on('click', f_acc);
@@ -37,6 +44,8 @@ $(document).ready(function() {
 function f_acc(){
 //скрываем все кроме того, что должны открыть
 	$('.category__list').not($(this).next()).slideUp(300);
+	$('.category__head').not($(this)).removeClass("open");
 // открываем или скрываем блок под заголовком, по которому кликнули
     $(this).next().slideToggle(300);
+    $(this).toggleClass("open");
 }
