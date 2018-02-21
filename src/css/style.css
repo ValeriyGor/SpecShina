@@ -2,8 +2,8 @@
 @import url("https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700");
 body {
   background: #f7f7f7;
-  -webkit-background-size: 375px 375px;
-  background-size: 375px; }
+  -webkit-background-size: 1920px 1920px;
+  background-size: 1920px; }
 
 h2 {
   color: #000;
@@ -440,7 +440,7 @@ h2 {
   display: none; }
 
 .morelink {
-  display: block; }
+  display: inline-block; }
 
 .footer {
   background: #282828;
@@ -600,12 +600,20 @@ h2 {
       background: #0054b9;
       margin-right: 11px; }
 
+.tabs-filters h3 {
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 30px;
+  padding-bottom: 15px;
+  border-bottom: 2px solid #e6e6e6; }
+
 .product h3 {
   font-size: 24px;
   line-height: 30px;
   padding-bottom: 15px;
   border-bottom: 2px solid #e6e6e6;
-  margin-bottom: 30px; }
+  margin-bottom: 30px;
+  font-weight: 600; }
   .product h3 .bold {
     font-weight: 700; }
   .product h3 span {
@@ -685,6 +693,9 @@ h2 {
     padding: 13px 2px 22px;
     border-bottom: 2px solid #e8e8e8;
     margin-bottom: 28px; }
+    .offer form label {
+      font-size: 0;
+      font-weight: 400; }
     .offer form input {
       height: 50px;
       width: 45px;
@@ -693,7 +704,8 @@ h2 {
       -webkit-border-radius: 3px;
       border-radius: 3px;
       color: #999;
-      text-align: center; }
+      text-align: center;
+      font-size: 14px; }
     .offer form .buy {
       width: 180px;
       height: 50px;
@@ -731,9 +743,15 @@ h2 {
     -webkit-border-radius: 3px;
     border-radius: 3px;
     font-weight: 600;
+    -webkit-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
     background: #fff;
     display: block;
     border: 1px solid #e5e5e5; }
+    .offer .call-back-form:hover {
+      text-decoration: none;
+      background: #dfdfdf; }
 
 .logo-bidus {
   width: 150px; }
@@ -837,7 +855,7 @@ h2 {
     -webkit-flex: 8;
     -ms-flex: 8;
     flex: 8; }
-  .catalog__head div {
+  .catalog__head .sort {
     -webkit-box-flex: 2;
     -webkit-flex: 2;
     -ms-flex: 2;
@@ -1044,7 +1062,7 @@ h2 {
     margin-top: 18px;
     padding-left: 25px; }
   .category {
-    padding-left: 20px; }
+    padding-left: 9px; }
     .category .accordeon {
       padding-top: 10px;
       margin-bottom: 40px; }
@@ -1061,6 +1079,12 @@ h2 {
       .category__list li a {
         font-size: 12px;
         line-height: 28px; }
+  .tabs-filters {
+    padding-left: 9px; }
+    .tabs-filters h3 {
+      font-size: 20px;
+      line-height: 30px;
+      padding-bottom: 8px; }
   .filters-text {
     padding-left: 5px;
     font-size: 14px;
@@ -1295,6 +1319,8 @@ h2 {
     width: 120px;
     height: 35px;
     font-size: 12px; }
+  .chevron img {
+    width: 14px; }
   .footer {
     margin-top: 30px;
     padding-top: 30px;
@@ -1346,6 +1372,10 @@ h2 {
   .category__list li a {
     font-size: 10px;
     line-height: 20px; }
+  .tabs-filters h3 {
+    font-size: 16px;
+    line-height: 22px;
+    padding-bottom: 8px; }
   .filters-text {
     font-size: 10px;
     margin-top: 15px;
@@ -1391,7 +1421,8 @@ h2 {
       margin-bottom: 10px; }
       .offer form input {
         height: 30px;
-        width: 40px; }
+        width: 40px;
+        font-size: 14px; }
       .offer form .buy {
         width: 114px;
         height: 30px;
@@ -1835,18 +1866,16 @@ h2 {
     margin-left: 0; }
   .sort {
     width: 100%;
-    padding-left: 50%;
+    padding-left: 0;
     margin-bottom: 30px;
     border-bottom: none; }
     .sort .jq-selectbox__select-text {
-      font-size: 25px; }
+      font-size: 25px;
+      margin-left: 0; }
     .sort .jq-selectbox {
       width: 100%; }
-      .sort .jq-selectbox__select {
-        border-bottom: 2px solid #ffdb4d; }
       .sort .jq-selectbox li {
-        font-size: 25px;
-        height: 45px; }
+        font-size: 25px; }
   .footer {
     padding: 25px 0;
     margin-top: 60px; }
@@ -1952,7 +1981,11 @@ h2 {
       .product .offer .general {
         background: #fff;
         padding: 18px 0px 0;
-        border: 1px solid #e5e5e5; }
+        border: 1px solid #e5e5e5;
+        -webkit-border-bottom-left-radius: 3px;
+        border-bottom-left-radius: 3px;
+        -webkit-border-bottom-right-radius: 3px;
+        border-bottom-right-radius: 3px; }
       .product .offer p {
         font-size: 20px;
         padding-left: 40px;
@@ -1969,24 +2002,16 @@ h2 {
         border-bottom: 1px solid #e5e5e5;
         padding-bottom: 30px; }
       .product .offer form {
-        display: -webkit-box;
-        display: -webkit-flex;
-        display: -ms-flexbox;
-        display: flex;
-        -webkit-flex-wrap: wrap;
-        -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-        -webkit-justify-content: space-around;
-        -ms-flex-pack: distribute;
-        justify-content: space-around;
-        -webkit-box-align: center;
-        -webkit-align-items: center;
-        -ms-flex-align: center;
-        align-items: center;
+        text-align: center;
         padding-bottom: 0;
         margin-bottom: 0; }
+        .product .offer form label {
+          font-size: 24px;
+          color: #a8a8a8; }
         .product .offer form .product-status {
-          top: 0; }
+          top: 76px;
+          position: absolute;
+          right: 50px; }
         .product .offer form button {
           margin: 15px 0 0 0;
           -webkit-box-ordinal-group: 4;
@@ -1996,7 +2021,15 @@ h2 {
           width: 100%;
           font-size: 36px;
           color: #000;
-          height: 100px; }
+          height: 100px;
+          width: -webkit-calc(100% + 6px);
+          width: calc(100% + 6px);
+          margin-left: -3px;
+          margin-bottom: -3px;
+          -webkit-border-top-left-radius: 0;
+          border-top-left-radius: 0;
+          -webkit-border-top-right-radius: 0;
+          border-top-right-radius: 0; }
         .product .offer form span {
           -webkit-box-ordinal-group: 3;
           -webkit-order: 2;
@@ -2006,7 +2039,9 @@ h2 {
           -webkit-box-ordinal-group: 2;
           -webkit-order: 1;
           -ms-flex-order: 1;
-          order: 1; }
+          order: 1;
+          border: none;
+          font-size: 24px; }
       .product .offer .questions {
         font-size: 36px;
         line-height: 44px; }
@@ -2102,27 +2137,45 @@ h2 {
   .filters-text {
     padding-left: 30px;
     font-size: 24px; }
-  .add-filters button {
-    background: #f7df68;
-    -webkit-border-radius: 0;
-    border-radius: 0;
-    width: 100%;
-    font-size: 36px;
-    color: #000;
-    height: 110px;
-    font-weight: bold; }
-  .add-filters .jq-selectbox__select {
-    background: #fafafa url(../img/svg/ic_arrow_down.svg) center right 15px no-repeat;
-    -webkit-border-radius: 0;
-    border-radius: 0;
-    height: 78px;
-    padding-left: 30px; }
-  .add-filters .jq-selectbox__select-text {
-    font-size: 24px;
-    line-height: 78px; }
-  .add-filters .jq-selectbox li {
-    font-size: 24px;
-    line-height: 50px; } }
+  .add-filters {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column; }
+    .add-filters button {
+      background: #f7df68;
+      -webkit-border-radius: 0;
+      border-radius: 0;
+      width: 100%;
+      font-size: 36px;
+      color: #000;
+      height: 110px;
+      font-weight: bold;
+      -webkit-box-ordinal-group: 11;
+      -webkit-order: 10;
+      -ms-flex-order: 10;
+      order: 10; }
+    .add-filters .jq-selectbox__select {
+      background: #fafafa url(../img/svg/ic_arrow_right.svg) center right 15px no-repeat;
+      -webkit-background-size: 10px 10px;
+      background-size: 10px;
+      -webkit-border-radius: 0;
+      border-radius: 0;
+      height: 78px;
+      padding-left: 30px;
+      margin-bottom: -1px; }
+    .add-filters .jq-selectbox__select-text {
+      font-size: 24px;
+      line-height: 78px;
+      font-weight: 500; }
+    .add-filters .jq-selectbox li {
+      font-size: 24px;
+      line-height: 50px; } }
 
 @media (max-width: 480px) {
   h2 {
@@ -2226,8 +2279,8 @@ h2 {
     height: 425px;
     margin-bottom: 17px; }
     .banner__text h1 {
-      font-size: 24px;
-      line-height: 34px; }
+      font-size: 28px;
+      line-height: 38px; }
     .banner__text p {
       font-size: 14px;
       line-height: 20px;
@@ -2315,7 +2368,7 @@ h2 {
     height: 300px; }
   .sort {
     width: 100%;
-    padding-left: 45%;
+    padding-left: 0;
     margin-bottom: 15px;
     border-bottom: none; }
     .sort .jq-selectbox__select-text {
@@ -2325,8 +2378,7 @@ h2 {
       .sort .jq-selectbox__select {
         border-bottom: 2px solid #ffdb4d; }
       .sort .jq-selectbox li {
-        font-size: 14px;
-        height: 30px; }
+        font-size: 14px; }
   .footer {
     padding: 12px 0;
     margin-top: 30px; }
@@ -2455,6 +2507,20 @@ h2 {
     .product .offer form button {
       font-size: 21px;
       height: 60px; }
+    .product .offer form input {
+      font-size: 14px; }
+    .product .offer form label {
+      font-size: 14px;
+      color: #a8a8a8; }
+    .product .offer form .product-status {
+      top: 38px;
+      right: 15px;
+      font-size: 11px; }
+    .product .offer form .chevron {
+      margin-right: 5px;
+      vertical-align: sub; }
+      .product .offer form .chevron img {
+        width: 15px; }
     .product .offer .call-back-form {
       height: 53px;
       font-size: 16px;
@@ -2484,28 +2550,58 @@ h2 {
       line-height: 50px; }
   .filters-text {
     padding-left: 15px;
-    font-size: 14px; }
-  .add-filters button {
-    background: #f7df68;
-    -webkit-border-radius: 0;
-    border-radius: 0;
-    width: 100%;
-    font-size: 20px;
-    color: #000;
-    height: 60px;
-    font-weight: bold; }
-  .add-filters .jq-selectbox {
-    margin-top: 10px; }
-    .add-filters .jq-selectbox__select {
-      background: #fafafa url(../img/svg/ic_arrow_down.svg) center right 15px no-repeat;
+    font-size: 14px;
+    margin-bottom: 15px; }
+  .add-filters {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column; }
+    .add-filters button {
+      background: #f7df68;
       -webkit-border-radius: 0;
       border-radius: 0;
-      height: 40px;
-      padding-left: 15px;
+      width: 100%;
+      font-size: 20px;
+      color: #000;
+      height: 60px;
+      font-weight: bold;
+      -webkit-box-ordinal-group: 11;
+      -webkit-order: 10;
+      -ms-flex-order: 10;
+      order: 10; }
+    .add-filters .jq-selectbox {
       margin-top: 0; }
-    .add-filters .jq-selectbox__select-text {
-      font-size: 14px;
-      line-height: 40px; }
-    .add-filters .jq-selectbox li {
-      font-size: 14px;
-      line-height: 28px; } }
+      .add-filters .jq-selectbox__select {
+        background: #fafafa url(../img/svg/ic_arrow_right.svg) center right 15px no-repeat;
+        -webkit-background-size: 5px 5px;
+        background-size: 5px;
+        -webkit-border-radius: 0;
+        border-radius: 0;
+        height: 40px;
+        padding-left: 15px;
+        margin-top: 0;
+        border-left: none;
+        border-right: none;
+        border-top: 1px solid #eaeaea;
+        border-bottom: 1px solid #eaeaea; }
+      .add-filters .jq-selectbox__select-text {
+        font-size: 14px;
+        line-height: 40px;
+        margin-left: 0; }
+      .add-filters .jq-selectbox li {
+        font-size: 14px;
+        line-height: 28px; }
+    .add-filters .sort .jq-selectbox__dropdown {
+      display: block; } }
+
+@media (max-width: 359px) {
+  .product .offer .product__price {
+    font-size: 20px; }
+  .product .offer form .product-status {
+    top: 35px; } }

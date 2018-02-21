@@ -7,8 +7,8 @@ $bold: 700
 
 body
 	background: #f7f7f7 
-	//background: url(../img/alml.png) center top no-repeat
-	background-size: 375px
+	//background: url(../img/all.png) center top no-repeat
+	background-size: 1920px
 
 h2
 	color: #000
@@ -404,7 +404,7 @@ h2
     display: none
 
 .morelink 
-    display: block
+    display: inline-block
 
 
 .footer
@@ -560,6 +560,14 @@ h2
 						width: 20px
 						background: #0054b9
 						margin-right: 11px
+
+.tabs-filters
+	h3
+		font-size: 24px
+		font-weight: $semibold
+		line-height: 30px
+		padding-bottom: 15px
+		border-bottom: 2px solid #e6e6e6
 .product
 	h3
 		font-size: 24px
@@ -567,6 +575,7 @@ h2
 		padding-bottom: 15px
 		border-bottom: 2px solid #e6e6e6
 		margin-bottom: 30px
+		font-weight: $semibold
 		.bold
 			font-weight: $bold
 		span
@@ -638,6 +647,9 @@ h2
 		padding: 13px 2px 22px
 		border-bottom: 2px solid #e8e8e8
 		margin-bottom: 28px
+		label
+			font-size: 0
+			font-weight: $normal
 		input
 			height: 50px
 			width: 45px
@@ -646,6 +658,7 @@ h2
 			border-radius: 3px
 			color: #999
 			text-align: center
+			font-size: 14px
 		.buy
 			width: 180px
 			height: 50px
@@ -679,9 +692,13 @@ h2
 		margin: 10px 0 0 2px
 		border-radius: 3px
 		font-weight: $semibold
+		transition: all 0.3s
 		background: #fff
 		display: block
 		border: 1px solid #e5e5e5
+		&:hover
+			text-decoration: none
+			background: #dfdfdf
 .logo-bidus
 	width: 150px
 .product-list
@@ -757,7 +774,7 @@ h2
 	align-items: flex-start
 	h3
 		flex: 8
-	div
+	.sort
 		flex: 2
 		margin-left: 15px
 .sort
@@ -971,7 +988,7 @@ h2
 		margin-top: 18px
 		padding-left: 25px
 	.category
-		padding-left: 20px
+		padding-left: 9px
 		.accordeon
 			padding-top: 10px
 			margin-bottom: 40px
@@ -989,6 +1006,13 @@ h2
 				a
 					font-size: 12px
 					line-height: 28px
+	.tabs-filters
+		padding-left: 9px
+		h3
+			font-size: 20px
+			line-height: 30px
+			padding-bottom: 8px
+
 	.filters-text
 		padding-left: 5px
 		font-size: 14px
@@ -1253,6 +1277,9 @@ h2
 				width: 120px
 				height: 35px
 				font-size: 12px
+	.chevron
+		img
+			width: 14px
 	.footer 
 		margin-top: 30px
 		padding-top: 30px
@@ -1311,6 +1338,11 @@ h2
 				a
 					font-size: 10px
 					line-height: 20px
+	.tabs-filters
+		h3
+			font-size: 16px
+			line-height: 22px
+			padding-bottom: 8px		
 	.filters-text
 		font-size: 10px
 		margin-top: 15px
@@ -1360,6 +1392,7 @@ h2
 			input
 				height: 30px 
 				width: 40px
+				font-size: 14px
 			.buy
 				width: 114px
 				height: 30px
@@ -1775,18 +1808,16 @@ h2
 				margin-left: 0
 	.sort
 		width: 100%
-		padding-left: 50%
+		padding-left: 0
 		margin-bottom: 30px
 		border-bottom: none
 		.jq-selectbox__select-text
 			font-size: 25px
+			margin-left: 0
 		.jq-selectbox
-			width: 100%
-			&__select
-				border-bottom: 2px solid #ffdb4d
+			width: 100% 
 			li
 				font-size: 25px
-				height: 45px
 
 	.footer
 		padding: 25px 0
@@ -1877,6 +1908,8 @@ h2
 				background: #fff
 				padding: 18px 0px 0
 				border: 1px solid #e5e5e5
+				border-bottom-left-radius: 3px
+				border-bottom-right-radius: 3px
 			p 
 				font-size: 20px
 				padding-left: 40px
@@ -1894,14 +1927,16 @@ h2
 					border-bottom: 1px solid #e5e5e5
 					padding-bottom: 30px
 			form
-				display: flex
-				flex-wrap: wrap
-				justify-content: space-around
-				align-items: center
+				text-align: center
 				padding-bottom: 0
 				margin-bottom: 0
+				label
+					font-size: 24px
+					color: #a8a8a8
 				.product-status
-					top: 0
+					top: 76px
+					position: absolute
+					right: 50px
 				button
 					margin: 15px 0 0 0
 					order: 3
@@ -1909,10 +1944,17 @@ h2
 					font-size: 36px
 					color: #000
 					height: 100px
+					width: calc(100% + 6px)
+					margin-left: -3px
+					margin-bottom: -3px
+					border-top-left-radius: 0
+					border-top-right-radius: 0
 				span
 					order: 2
 				input
 					order: 1
+					border: none
+					font-size: 24px
 			
 			.questions
 				font-size: 36px
@@ -2016,7 +2058,9 @@ h2
 	.filters-text
 		padding-left: 30px
 		font-size: 24px
-	.add-filters 
+	.add-filters
+		display: flex
+		flex-direction: column
 		button
 			background: #f7df68
 			border-radius: 0
@@ -2025,15 +2069,19 @@ h2
 			color: #000
 			height: 110px
 			font-weight: bold
+			order: 10
 		.jq-selectbox
 			&__select
-				background: #fafafa url(../img/svg/ic_arrow_down.svg) center right 15px no-repeat
+				background: #fafafa url(../img/svg/ic_arrow_right.svg) center right 15px no-repeat
+				background-size: 10px
 				border-radius: 0
 				height: 78px
 				padding-left: 30px
+				margin-bottom: -1px
 			&__select-text
 				font-size: 24px
 				line-height: 78px
+				font-weight: 500
 			li
 				font-size: 24px
 				line-height: 50px
@@ -2147,8 +2195,8 @@ h2
 		margin-bottom: 17px
 		&__text 
 			h1
-				font-size: 24px
-				line-height: 34px
+				font-size: 28px
+				line-height: 38px
 			p
 				font-size: 14px
 				line-height: 20px
@@ -2246,7 +2294,7 @@ h2
 		height: 300px
 	.sort
 		width: 100%
-		padding-left: 45%
+		padding-left: 0
 		margin-bottom: 15px
 		border-bottom: none
 		.jq-selectbox__select-text
@@ -2256,8 +2304,7 @@ h2
 			&__select
 				border-bottom: 2px solid #ffdb4d
 			li
-				font-size: 14px
-				height: 30px
+				font-size: 14px 
 	.footer
 		padding: 12px 0 
 		margin-top: 30px
@@ -2390,6 +2437,20 @@ h2
 				button
 					font-size: 21px
 					height: 60px
+				input
+					font-size: 14px 
+				label
+					font-size: 14px
+					color: #a8a8a8
+				.product-status
+					top: 38px 
+					right: 15px
+					font-size: 11px
+				.chevron
+					margin-right: 5px
+					vertical-align: sub
+					img
+						width: 15px
 			.call-back-form
 				height: 53px
 				font-size: 16px
@@ -2422,7 +2483,10 @@ h2
 	.filters-text
 		padding-left: 15px
 		font-size: 14px
+		margin-bottom: 15px
 	.add-filters 
+		display: flex
+		flex-direction: column
 		button
 			background: #f7df68
 			border-radius: 0
@@ -2431,18 +2495,37 @@ h2
 			color: #000
 			height: 60px
 			font-weight: bold
+			order: 10
 		.jq-selectbox
-			margin-top: 10px
-			&__select
-				background: #fafafa url(../img/svg/ic_arrow_down.svg) center right 15px no-repeat
+			margin-top: 0
+			&__select				
+				background: #fafafa url(../img/svg/ic_arrow_right.svg) center right 15px no-repeat
+				background-size: 5px
 				border-radius: 0
 				height: 40px
 				padding-left: 15px
 				margin-top: 0
+				border-left: none
+				border-right: none
+				border-top: 1px solid #eaeaea
+				border-bottom: 1px solid #eaeaea
 			&__select-text
 				font-size: 14px
 				line-height: 40px
+				margin-left: 0
 			li
 				font-size: 14px
 				line-height: 28px
+		.sort
+			.jq-selectbox	
+				&__dropdown
+					display: block
 
+@media (max-width: 359px)
+	.product 
+		.offer 
+			.product__price
+				font-size: 20px
+			form
+				.product-status
+					top: 35px

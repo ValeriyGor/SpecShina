@@ -273,14 +273,15 @@
 		padding: 0
 	li
 		min-height: 18px
-		padding: 5px 10px 6px
+		padding: 8px 10px 8px
 		color: #231F20
+		border-bottom: 1px solid #e6e6e6
 		&.selected
-			background-color: #A3ABB1
-			color: #FFF
+			background-color: #ffdb4d
+			color: #000
 		&:hover
-			background-color: #08C
-			color: #FFF
+			background-color: #ffdb4d
+			color: #000
 		&.disabled
 			color: #AAA
 			&:hover
@@ -451,3 +452,10 @@ input
 		background: #F5F5F5
 		box-shadow: none
 		color: #888
+
+@media screen and (min-width: 768px) and (max-width: 991px)
+	.jq-selectbox
+		li
+			min-height: 18px
+			padding: 4px 10px 4px
+			font-size: 10px

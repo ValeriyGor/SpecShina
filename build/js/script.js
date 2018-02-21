@@ -1135,7 +1135,15 @@ $( ".header__city p" ).click(function() {
 	$(".header__city-list").slideToggle(300);
 	if ($(window).width() <= '767'){
         $(".head-menu").slideToggle(300);
-		$(".header__search").slideToggle(300);;
+		$(".header__search").slideToggle(300);
+    }
+});
+
+$(document).mouseup(function (e) {
+    var container = $(".header__city");
+    if (container.has(e.target).length === 0){
+        $(".header__city-list").slideUp(300);
+        $( ".header__city p" ).removeClass("open");
     }
 });
 
@@ -1173,7 +1181,7 @@ function f_acc(){
 $(document).ready(function() {
     // Configure/customize these variables.
     var showChar = 365;  // How many characters are shown by default
-    var ellipsestext = "...";
+    var ellipsestext = "";
     var moretext = "Читать дальше...";
     var lesstext = "Скрыть текст";
     
@@ -1205,4 +1213,14 @@ $(document).ready(function() {
         $(this).prev().toggle();
         return false;
     });
+    if ($(window).width() <= '767'){
+        $('#filters-wrap .add-filters').append( $('#sort'));
+    }
+});
+
+$( window ).resize(function() {
+	if ($(window).width() <= '767'){
+        $('#filters-wrap .add-filters').append( $('#sort'));
+    }
+	
 });
