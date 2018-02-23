@@ -1222,5 +1222,8 @@ $( window ).resize(function() {
 	if ($(window).width() <= '767'){
         $('#filters-wrap .add-filters').append( $('#sort'));
     }
+	if ($(window).width() > '767'){
+        $('.catalog__head').append( $('#sort'));
+    }
 	
 });

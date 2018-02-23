@@ -676,10 +676,10 @@ h2
 			line-height: 25px
 			display: inline-block
 			position: relative
-			top: -5px
+			top: 0
 			.chevron
 				font-size: 25px
-				line-height: 25px 
+				line-height: 24px 
 				vertical-align: middle
 				margin-right: 8px
 				color: #8ac176
@@ -688,7 +688,7 @@ h2
 		text-align: center
 		width: 206px
 		height: 50px
-		line-height: 50px 
+		line-height: 46px 
 		margin: 10px 0 0 2px
 		border-radius: 3px
 		font-weight: $semibold
@@ -698,7 +698,8 @@ h2
 		border: 1px solid #e5e5e5
 		&:hover
 			text-decoration: none
-			background: #dfdfdf
+			background: #ffd633
+			color: #000
 .logo-bidus
 	width: 150px
 .product-list
@@ -709,6 +710,7 @@ h2
 		border-bottom-width: 0
 		border-top-left-radius: 3px
 		border-top-right-radius: 3px
+		box-shadow: 0px 0px 35px rgba(0, 0, 0, 0.14)
 		&.disabled-item
 			opacity: 0.5
 	&__img
@@ -1097,7 +1099,7 @@ h2
 			padding-bottom: 15px
 			margin-bottom: 25px
 			.product-status
-				top: -3px
+				top: 0px
 			input
 				height: 45px
 				width: 40px
@@ -1266,7 +1268,7 @@ h2
 			font-size: 12px
 		.secrchme
 			.jq-selectbox__select
-				width: 150px
+				width: 170px
 				height: 35px
 				line-height: 35px
 				font-size: 12px
@@ -1274,7 +1276,7 @@ h2
 				li 
 					font-size: 12px
 			button
-				width: 120px
+				width: 115px
 				height: 35px
 				font-size: 12px
 	.chevron
@@ -1368,8 +1370,12 @@ h2
 			margin-bottom: 15px
 		&__img
 			height: 196px
+			box-shadow: 0px 0px 35px rgba(0, 0, 0, 0.14)
+
 	.offer 
 		padding-left: 19px
+		.general	
+			box-shadow: 0px 8px 18px rgba(0, 0, 0, 0.14)
 		.call-back-form
 			width: 128px
 			height: 30px
@@ -1400,7 +1406,7 @@ h2
 			.product-status 
 				font-size: 10px
 				padding-left: 2px
-				top: -3px
+				top: 0
 				.chevron
 					font-size: 15px
 					margin-right: 4px
@@ -1497,7 +1503,7 @@ h2
 
 	.header
 		position: absolute
-		z-index: 299
+		z-index: 99
 		width: 100%
 		top: 0
 		min-height: 130px
@@ -1525,8 +1531,12 @@ h2
 					display: none
 			.header__cart 
 				width: 240px
+				transition: all 0.3s
 				a 
 					font-size: 24px
+					transition: all 0.3s
+					span
+						transition: all 0.3s
 					img
 						margin-right: 12px
 					span
@@ -1918,7 +1928,7 @@ h2
 				width: 100%
 				height: 90px
 				font-size: 27px
-				line-height: 90px
+				line-height: 86px
 				margin: 14px 0 0 2px
 			.product
 				&__price
@@ -2058,6 +2068,7 @@ h2
 	.filters-text
 		padding-left: 30px
 		font-size: 24px
+		margin-bottom: 18px
 	.add-filters
 		display: flex
 		flex-direction: column
@@ -2070,6 +2081,7 @@ h2
 			height: 110px
 			font-weight: bold
 			order: 10
+			margin-top: 7px
 		.jq-selectbox
 			&__select
 				background: #fafafa url(../img/svg/ic_arrow_right.svg) center right 15px no-repeat
@@ -2077,15 +2089,53 @@ h2
 				border-radius: 0
 				height: 78px
 				padding-left: 30px
+				margin-top: 0
 				margin-bottom: -1px
 			&__select-text
 				font-size: 24px
 				line-height: 78px
 				font-weight: 500
+			&__dropdown
+				position: fixed
+				overflow: scroll
+				transition: all 0.3s
+				top: 0%!important
+				left: 0%
+				z-index: 999!important
+				width: 100%
+				height: 100vh!important
 			li
 				font-size: 24px
 				line-height: 50px
-
+		.sort
+			.jq-selectbox
+				&__select
+					display: none
+				&__dropdown
+					border: none
+					border-radius: 0
+					box-shadow: none
+					display: block!important
+					overflow: visible
+					position: static!important
+					height: auto!important
+					border-top: 1px solid #eaeaea
+					li
+						background: #fafafa
+						height: 78px
+						position: relative
+						padding-left: 30px
+						&.selected:after
+							position: absolute
+							content: ""
+							top: 22px
+							right: 30px
+							width: 36px
+							height: 28px
+							background: url("../img/svg/ic_check.svg") center no-repeat
+							background-size: 25px
+	.product-list__order-now:hover:after
+		display: none
 
 @media (max-width: 480px)
 	h2
@@ -2114,9 +2164,13 @@ h2
 			right: 25px
 			width: 35px
 			height: 35px
+			transition: all 0.3s
 			a
 				font-size: 0
 				line-height: 30px
+				transition: all 0.3s
+				span
+					transition: all 0.3s
 				img
 					width: 14px
 			.count-order
@@ -2398,6 +2452,8 @@ h2
 			margin-bottom: 15px
 		&__img
 			height: 340px
+			margin-bottom: -1px
+			box-shadow: 0px 0px 35px rgba(0, 0, 0, 0.14)
 		.product__description
 			margin-top: 26px
 			padding: 20px 15px
@@ -2412,12 +2468,14 @@ h2
 			padding: 24px 10px
 			margin-bottom: 25px
 			h4
-				font-size: 14px
-				line-height: 19px
+				font-size: 16px
+				line-height: 20px
 				margin-bottom: 10px
 			p
 				font-size: 14px
 				line-height: 21px
+				span
+					display: inline-block
 
 		.offer 
 			.questions
@@ -2425,6 +2483,7 @@ h2
 				line-height: 34px				
 			.general
 				padding-top: 12px
+				box-shadow: 0px 8px 18px rgba(0, 0, 0, 0.14)
 			.product__price
 				font-size: 25px 
 				line-height: 34px
@@ -2434,9 +2493,11 @@ h2
 				padding-left: 18px
 				line-height: 19px
 			form 
+				padding-top: 0
 				button
 					font-size: 21px
 					height: 60px
+					margin-top: 0
 				input
 					font-size: 14px 
 				label
@@ -2517,9 +2578,20 @@ h2
 				font-size: 14px
 				line-height: 28px
 		.sort
-			.jq-selectbox	
+			.jq-selectbox
 				&__dropdown
-					display: block
+					border-top: 1px solid #eaeaea
+					li
+						height: 40px
+						padding-left: 15px
+						&.selected:after
+							top: 12px
+							right: 15px
+							width: 18px
+							height: 15px
+							background: url("../img/svg/ic_check.svg") center no-repeat
+							background-size: contain
+
 
 @media (max-width: 359px)
 	.product 
