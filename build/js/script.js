@@ -1117,6 +1117,7 @@ $( ".button-mobile svg" ).click(function() {
 		$(".head-menu").slideUp(300);
 		$(".header__search").slideUp(300);
 		$(".header__city-list").slideUp(300);
+		$(".substrate").slideUp(300);
 		
 	}
 	else{
@@ -1125,7 +1126,8 @@ $( ".button-mobile svg" ).click(function() {
 		$(".header").toggleClass("opened");
 		$(".header__city").slideToggle(300);
 		$(".head-menu").slideToggle(300);
-		$(".header__search").slideToggle(300);
+		$(".header__search").slideToggle(300);		
+		$(".substrate").slideDown(300);
 	}
 	
 });
@@ -1151,6 +1153,13 @@ $( ".button-tab h3" ).click(function() {
 	if ($(window).width() <= '767'){
 		$(this).next().slideToggle(300);
 		$(this).parent().toggleClass("open");
+		if ( $(this).parent().hasClass("open") ) {
+			$(".substrate2").slideDown(300);
+			
+		}
+		else{
+			$(".substrate2").slideUp(300);
+		}
 	}
 });
 
