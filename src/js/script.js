@@ -1118,7 +1118,8 @@ $( ".button-mobile svg" ).click(function() {
 		$(".header__search").slideUp(300);
 		$(".header__city-list").slideUp(300);
 		$(".substrate").slideUp(300);
-		$('body').css('overflow','auto');
+		$('body, html').css('overflow','auto');
+		$('body').css('position','static');
 	}
 	else{
 		$(this).toggleClass("open");
@@ -1129,6 +1130,7 @@ $( ".button-mobile svg" ).click(function() {
 		$(".header__search").slideToggle(300);		
 		$(".substrate").slideDown(300);
 		$('body').css('overflow','hidden');
+		$('body').css('position','fixed');
 	}
 	
 });

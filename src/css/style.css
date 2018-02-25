@@ -1573,7 +1573,7 @@ h2 {
       -o-transition: all 0.3s;
       transition: all 0.3s; }
     .header.opened {
-      padding-bottom: 25px;
+      padding-bottom: 50px;
       height: 100vh;
       overflow: scroll;
       position: fixed;
@@ -2273,7 +2273,7 @@ h2 {
       top: 28px;
       left: 75px; }
     .header.opened {
-      padding-bottom: 12.5px; }
+      padding-bottom: 50px; }
       .header.opened .header__cart {
         width: 120px; }
         .header.opened .header__cart a {
