@@ -1,9 +1,7 @@
 @charset "UTF-8";
 @import url("https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700");
 body {
-  background: #f7f7f7;
-  -webkit-background-size: 1920px 1920px;
-  background-size: 1920px; }
+  background: #f7f7f7; }
 
 h2 {
   color: #000;

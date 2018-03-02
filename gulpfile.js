@@ -47,8 +47,8 @@ gulp.task('autoprefix', ['mincss'], function () {
 //Минимизация JS - готов
 gulp.task('scripts', function() {
     return gulp.src('./src/js/*.js')
-    .pipe(concat('script.js'))
-    //.pipe(uglyfly())
+    //.pipe(concat('script.js'))
+    .pipe(uglyfly())
     .pipe(gulp.dest('./src/js/'));
 });
 
