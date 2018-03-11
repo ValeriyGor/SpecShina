@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
@@ -67,7 +67,7 @@
 		<div class="banner__text">
 			<h1>Фирменные грузовые шины в Екатеринбурге</h1>
 			<p>Уникальные поставки шин из других стран по доступной цене. Вы можете обратиться к нашим специалистам по горячей линии круглосуточно!</p>
-			<a href="#" class="call-back">Обратный звонок</a>
+			<a href="#" class="call-back go">Обратный звонок</a>
 		</div>		
 	</section>
 	<section class="catalog container">
@@ -150,7 +150,10 @@
 				<div class="col-sm-3">
 					<img src="img/svg/ic_logo_white.svg" alt="" class="footer-logo"> 
 					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia fugit eius eum illum, fuga aspernatur facilis, impedit</p>
-					<img src="img/logo-bidus.png" alt="" class="logo-bidus">
+					<a href="http://bidus.digital/" class="footer-developers">
+						<p>Разработка и продвижение</p>
+						<img src="img/logo-bidus.png" alt="" class="logo-bidus">
+					</a>
 				</div>
 				<div class="col-sm-3">
 					<h3>Навигация</h3>
@@ -180,6 +183,17 @@
 		</div>
 	</footer>
 	<div class="substrate"></div>
+	<div id="modal_form"><!-- Сaмo oкнo --> 
+		<img id="modal_close" src="img/ic_close_gray.svg" alt="">
+		<h3>Обратный звонок</h3>
+		<p>Укажите ваш номер и мы Вам перезвоним</p>
+		<form action="">
+			<label for=""><input id="name-call-back" type="text" placeholder="Ваше имя" required=""></label>
+			<label for=""><input type="text" id="number-phone" placeholder="Ваш телефон" required=""></label>
+			<button>Отправить</button>
+		</form>
+	</div>
+	<div id="overlay"></div><!-- Пoдлoжкa -->
 	<!-- Latest compiled and minified JavaScript -->
 	<script
 	src="http://code.jquery.com/jquery-3.3.1.min.js"
@@ -188,6 +202,7 @@
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 	<script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
     <script type="" src="js/formstyler.js"></script>
+    <script type="" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.maskedinput/1.4.1/jquery.maskedinput.min.js"></script>
     <script type="" src="js/script.js"></script>
 </body>
 </html>

@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
@@ -324,6 +324,17 @@
 	</footer>
 	<div class="substrate"></div>
 	<div class="substrate2"></div>
+	<div id="modal_form"><!-- Сaмo oкнo --> 
+		<img id="modal_close" src="img/ic_close_gray.svg" alt="">
+		<h3>Обратный звонок</h3>
+		<p>Укажите ваш номер и мы Вам перезвоним</p>
+		<form action="">
+			<label for=""><input id="name-call-back" type="text" placeholder="Ваше имя" required=""></label>
+			<label for=""><input type="text" id="number-phone" placeholder="Ваш телефон" required=""></label>
+			<button>Отправить</button>
+		</form>
+	</div>
+	<div id="overlay"></div><!-- Пoдлoжкa -->
 	<!-- Latest compiled and minified JavaScript -->
 	<script
 	src="http://code.jquery.com/jquery-3.3.1.min.js"
@@ -332,6 +343,7 @@
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 	<script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
     <script type="" src="js/formstyler.js"></script>
+    <script type="" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.maskedinput/1.4.1/jquery.maskedinput.min.js"></script>
     <script type="" src="js/script.js"></script>
 </body>
 </html>

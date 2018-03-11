@@ -405,7 +405,7 @@ h2 {
   cursor: pointer;
   width: 265px;
   height: 45px;
-  line-height: 45px;
+  line-height: 42px;
   vertical-align: top;
   -webkit-border-radius: 3px;
   border-radius: 3px;
@@ -471,6 +471,111 @@ h2 {
     padding-right: 25px; }
     .footer .row div p span {
       color: #999; }
+  .footer .row div .footer-developers {
+    margin-top: 35px;
+    opacity: 0.5; }
+    .footer .row div .footer-developers p {
+      font-size: 10px;
+      margin: 0;
+      -webkit-transition: all 0.3s;
+      -o-transition: all 0.3s;
+      transition: all 0.3s; }
+    .footer .row div .footer-developers:hover p {
+      opacity: 0; }
+
+#modal_form {
+  max-width: 100%;
+  width: 400px;
+  height: 346px;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+  background: #fff;
+  border: 1px solid #e6e6e6;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  margin-top: -173px;
+  margin-left: -200px;
+  display: none;
+  opacity: 0;
+  z-index: 299;
+  padding: 36px 50px; }
+  #modal_form #modal_close {
+    width: 12px;
+    height: 12px;
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    cursor: pointer;
+    display: block; }
+  #modal_form h3 {
+    text-align: center;
+    font-weight: 700;
+    color: #000; }
+  #modal_form p {
+    margin-top: 7px;
+    text-align: center;
+    color: #000;
+    margin-bottom: 26px; }
+  #modal_form label {
+    width: 100%;
+    font-weight: 400;
+    margin: 0;
+    padding: 0;
+    position: relative; }
+    #modal_form label.error:after {
+      display: block;
+      width: 16px;
+      height: 16px;
+      background: url("../img/error-form.png") center no-repeat;
+      -webkit-background-size: contain;
+      background-size: contain;
+      top: 17px;
+      right: 17px;
+      position: absolute;
+      content: ""; }
+  #modal_form input {
+    width: 100%;
+    display: block;
+    height: 50px;
+    border: 1px solid #e5e5e5;
+    margin-bottom: 20px;
+    font-size: 16px;
+    padding-left: 45px;
+    position: relative; }
+    #modal_form input::-webkit-input-placeholder, #modal_form input::-moz-placeholder, #modal_form input:-moz-placeholder, #modal_form input:-ms-input-placeholder {
+      color: #737373; }
+  #modal_form label:nth-of-type(1) input {
+    background: url("../img/user-icon.png") center left 15px no-repeat;
+    -webkit-background-size: 16px 16px;
+    background-size: 16px; }
+  #modal_form label:nth-of-type(2) input {
+    background: url("../img/ic_call.svg") center left 15px no-repeat;
+    -webkit-background-size: 20px 20px;
+    background-size: 20px; }
+  #modal_form button {
+    width: 100%;
+    height: 50px;
+    background-color: #ffdb4d;
+    color: #000;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 600;
+    display: block; }
+
+#overlay {
+  z-index: 199;
+  position: fixed;
+  background-color: #000;
+  opacity: 0.8;
+  -moz-opacity: 0.8;
+  filter: alpha(opacity=80);
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  cursor: pointer;
+  display: none; }
 
 .button-mobile {
   position: absolute;
@@ -757,7 +862,8 @@ h2 {
       color: #000; }
 
 .logo-bidus {
-  width: 150px; }
+  width: 141px;
+  margin-top: 3px; }
 
 .product-list__item {
   background: #fff;
@@ -950,7 +1056,7 @@ h2 {
   border-radius: 3px;
   width: 100%;
   height: 50px;
-  line-height: 50px;
+  line-height: 46px;
   padding-left: 20px;
   margin-top: 15px;
   border: 1px solid #e5e5e5;
@@ -1051,7 +1157,7 @@ h2 {
   .map-wrap .secrchme .jq-selectbox__select {
     width: 200px;
     height: 40px;
-    line-height: 40px;
+    line-height: 36px;
     font-size: 13px; }
     .map-wrap .secrchme .jq-selectbox__select li {
       font-size: 13px; }
@@ -1063,6 +1169,11 @@ h2 {
     line-height: 25px; }
   .footer .row div p {
     font-size: 12px; }
+  .footer .row div .footer-developers {
+    margin-top: 25px; }
+    .footer .row div .footer-developers p {
+      font-size: 8px;
+      margin: 0; }
   .footer .row div:first-of-type p {
     font-size: 12px; }
   .col-lg-1, .col-lg-10, .col-lg-11, .col-lg-12, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-md-1, .col-md-10, .col-md-11, .col-md-12, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-sm-1, .col-sm-10, .col-sm-11, .col-sm-12, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-xs-1, .col-xs-10, .col-xs-11, .col-xs-12, .col-xs-2, .col-xs-3, .col-xs-4, .col-xs-5, .col-xs-6, .col-xs-7, .col-xs-8, .col-xs-9 {
@@ -1102,7 +1213,7 @@ h2 {
     margin-bottom: 0; }
   .add-filters .jq-selectbox__select {
     height: 40px;
-    line-height: 40px;
+    line-height: 36px;
     margin-top: 12px; }
   .add-filters button {
     height: 40px;
@@ -1320,7 +1431,7 @@ h2 {
   .map-wrap .secrchme .jq-selectbox__select {
     width: 170px;
     height: 35px;
-    line-height: 35px;
+    line-height: 32px;
     font-size: 12px;
     padding-left: 10px; }
     .map-wrap .secrchme .jq-selectbox__select li {
@@ -1351,6 +1462,11 @@ h2 {
       font-size: 10px;
       line-height: 13px;
       margin: 4px 0  10px; }
+    .footer .row div:first-of-type .footer-developers {
+      margin-top: 25px; }
+      .footer .row div:first-of-type .footer-developers p {
+        font-size: 8px;
+        margin: 0; }
     .footer-logo {
       width: 110px; }
     .footer .logo-bidus {
@@ -1392,7 +1508,7 @@ h2 {
     margin-bottom: 0; }
   .add-filters .jq-selectbox__select {
     height: 30px;
-    line-height: 30px;
+    line-height: 28px;
     margin-top: 10px;
     font-size: 10px;
     padding-left: 10px; }
@@ -1466,7 +1582,7 @@ h2 {
     font-size: 10px;
     padding-left: 7px;
     height: 30px;
-    line-height: 30px;
+    line-height: 28px;
     padding-bottom: 0;
     background: transparent url(../img/svg/ic_smallarrow_down.svg) top 15px right 12px no-repeat;
     -webkit-background-size: 7px 7px;
@@ -1873,7 +1989,7 @@ h2 {
       -webkit-background-size: 16px 16px;
       background-size: 16px;
       height: 80px;
-      line-height: 78px;
+      line-height: 76px;
       font-size: 24px;
       padding-left: 26px;
       margin-bottom: 0px; }
@@ -2381,6 +2497,11 @@ h2 {
       margin: 12px auto; }
     .banner .call-back {
       margin-top: 25px; }
+  #modal_form {
+    width: 320px;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-left: -160px; }
   .catalog__item {
     padding-left: 15px;
     padding-right: 15px; }
